@@ -9,7 +9,7 @@ const UserDisplay = (props) => {
         <>
             <div className={`flex w-fit m-auto rounded-t-lg items-center ${userClass}`}>
 
-                <img className="w-12 h-12 rounded-full object-cover"
+                <img className="w-12 h-auto rounded-full object-cover"
                     src={userImg ? userImg : placeholderImg}
                     alt={`${userImg} profile`} />
 

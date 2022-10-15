@@ -11,7 +11,7 @@ const ListItem = (props) => {
                 {props.children}
                 {data.map(({ text, icon }) => {
                     return <li
-                        className="hover:bg-gray-700 cursor-pointer flex lg:px-12"
+                        className="hover:bg-gray-700 cursor-pointer flex py-4 px-4 rounded-md"
                         key={text} >
 
                         {icon ?

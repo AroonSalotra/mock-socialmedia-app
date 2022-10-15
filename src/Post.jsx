@@ -16,7 +16,7 @@ const Post = (props) => {
     return (
         <>
             <div
-                className="flex flex-col bg-gray-800 text-white items-center m-auto rounded-t-lg mt-4 md:w-50rem">
+                className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mt-4 md:w-50rem">
 
                 <UserDisplay
                     userName={userName}
@@ -35,14 +35,13 @@ const Post = (props) => {
                 />
 
 
-                <hr className="w-11/12 mt-4" />
+                {/* <hr className="w-11/12 mt-4" /> */}
 
                 <ListItem
-                    classList={"flex justify-around w-full py-2"}
+                    classList={"flex justify-around w-full"}
                     data={postInteraction} />
 
                 <hr className="w-11/12" />
-
 
                 <Comment
                     userImg={userImg}

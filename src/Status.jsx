@@ -3,7 +3,7 @@ import UserDisplay from "./UserDisplay";
 const Status = () => {
     return (
         <>
-            <div className="m-auto p-4 bg-gray-800 text-white 
+            <div className="m-auto p-4 bg-gray-900 text-white 
             lg:w-50rem">
 
                 <UserDisplay

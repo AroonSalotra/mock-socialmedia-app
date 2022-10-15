@@ -21,11 +21,10 @@ const ListPost = () => {
             postText: "Austria 2018",
             postImg: "https://images.unsplash.com/photo-1665440659316-c290791ccbca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
         }
-
     ]
 
     return (
-        <>
+        <section>
             {DATA.map(({ userName, userImg, postDate, postImg, postText }) => {
                 return <Post
                     userName={userName}
@@ -35,8 +34,7 @@ const ListPost = () => {
                     postText={postText}
                 />
             })}
-
-        </>
+        </section>
     );
 }
 
