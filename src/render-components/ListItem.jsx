@@ -5,24 +5,26 @@ const ListItem = (props) => {
 
 
     return (
-        <>
-            <ul
-                className={classList} >
-                {props.children}
-                {data.map(({ text, icon }) => {
-                    return <li
-                        className="hover:bg-gray-700 cursor-pointer flex py-4 px-4 rounded-md"
-                        key={text} >
+        <ul
+            className={classList} >
+            {props.children}
+            {data.map(({ text, icon, clickEffect }) => {
+                return <li
+                    className="hover:bg-gray-700 cursor-pointer flex py-4 px-4 rounded-md"
 
-                        {icon ?
-                            <span className="text-3xl px-4">{icon} </span> : null}
-                        {text}
+                    key={text}
 
-                    </li>
-                })}
+                    onClick={() => clickEffect()}>
 
-            </ul>
-        </>
+                    {icon ?
+                        <span className="text-3xl px-4">
+                            {icon}</span> : null}
+
+                    {text}
+                </li>
+            })}
+
+        </ul>
     );
 }
 

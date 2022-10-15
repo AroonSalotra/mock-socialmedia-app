@@ -7,39 +7,40 @@ const Post = (props) => {
 
     const postInteraction = [
         { text: "Like" },
-        { text: "Comment" },
+        { text: "Comment", clickEffect: "" },
         { text: "Share" },
     ]
-
-    const userClass = "flex"
 
     return (
         <>
             <div
                 className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mt-4 md:w-50rem">
 
-                <UserDisplay
-                    userName={userName}
-                    userImg={userImg}
-                    showName={true}
-                />
+                <div className="py-2">
+                    <UserDisplay
+                        userName={userName}
+                        userImg={userImg}
+                        showName={true} />
 
-                <p className="text-gray-400">{`Posted on ${postDate}`}</p>
+                    <p className="text-gray-400 text-center">
+                        {`Posted on ${postDate}`}</p>
+                </div>
 
-                {/* <p className="text-white font-normal px-4 py-2 text-lg">{postText}</p> */}
+                <p className="text-xl p-4">
+                    {postText}
+                </p>
 
-                <img
-                    className="w-full h-auto"
-                    src={postImg}
-                    alt={`${postImg}'s post on ${postDate}`}
-                />
+                {postImg ?
+                    <img
+                        className="w-full h-auto"
+                        src={postImg}
+                        alt={`${postImg}'s post on ${postDate}`} />
+                    :
+                    null}
 
-
-                {/* <hr className="w-11/12 mt-4" /> */}
-
-                <ListItem
+                {/* <ListItem
                     classList={"flex justify-around w-full"}
-                    data={postInteraction} />
+                    data={postInteraction} /> */}
 
                 <hr className="w-11/12" />
 

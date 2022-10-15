@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <div className="text-white bg-gray-800">
-        {/* <Navbar /> */}
+        <Navbar />
         {/* <Comment /> */}
         <Status />
         <Tabs />
