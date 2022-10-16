@@ -37,11 +37,12 @@ function App() {
     }
   }
 
-  const userImg = "https://images.unsplash.com/photo-1665615839740-f9cfcc9568f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+  // https://www.dailymail.co.uk/sport/boxing/article-11320987/Referee-intervenes-STOP-Caleb-Plants-gravedigging-celebration-rival-KOd.html
 
   return (
     <>
       <div className="text-white bg-gray-800">
+      
         <Navbar />
         <div className='lg:py-20'>
           <Contacts users={USERS} />

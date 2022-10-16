@@ -3,14 +3,14 @@ import UserDisplay from "./UserDisplay";
 import Comment from "./Comment";
 
 const Post = (props) => {
-    const { userName, postDate, userImg, postImg, postText } = props
+    const { userName, postDate, userImg, postImg, postText, postLink } = props
 
     return (
         <>
             <div
                 className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 md:w-50rem lg:mt-4">
 
-                <div className="py-2">
+                <div className="py-2 px-8 bg-gray-800 rounded-b-lg lg:">
                     <UserDisplay
                         userName={userName}
                         userImg={userImg} />
@@ -31,6 +31,18 @@ const Post = (props) => {
                         alt={`${postImg}'s post on ${postDate}`} />
                     :
                     null}
+
+                {postLink ?
+                    <a href={postLink} target="_blank" rel="noreferrer">
+                        Link
+                    </a>
+                    :
+                    null
+                }
+
+               
+
+
                 <hr className="w-11/12" />
 
                 <Comment
