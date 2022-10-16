@@ -1,4 +1,4 @@
-import SearchBar from "../Components/SearchBar";
+import SearchBar from "../components/SearchBar";
 
 const ListItem = (props) => {
     const { data, classList, query } = props;
@@ -9,10 +9,11 @@ const ListItem = (props) => {
         <ul
             className={classList} >
             {props.children}
-            {data.map(({ text, icon, clickEffect }) => {
+            {data.map(({ text, icon, clickEffect, id }) => {
                 return clickEffect ?
                     // Return <li with onclick if key exists
-                    <li onClick={() => clickEffect()}
+                    <li key={text ? text : id}
+                        onClick={() => clickEffect()}
                         className={thisClass}>
                         {icon ?
                             <span className="text-3xl px-4">
@@ -21,12 +22,12 @@ const ListItem = (props) => {
                     </li>
                     :
                     // Return <li without onclick otherwise
-                    <li className={thisClass}>
+                    <li key={text ? text : id}
+                        className={thisClass}>
                         {icon ?
                             <span className="text-3xl px-4">
                                 {icon}</span> : null}
                         {text ? text : null}
-
                     </li>
             })}
 

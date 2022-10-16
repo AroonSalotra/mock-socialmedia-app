@@ -1,12 +1,12 @@
-import Comment from './Components/Comment';
-import Contacts from './Components/Contacts';
-import Navbar from './Components/Navbar';
-import Post from './Components/Post';
+import Comment from './components/Comment';
+import Contacts from './components/Contacts';
+import Navbar from './components/Navbar';
+import Post from './components/Post';
 import ListPost from './render-components/ListPost';
-import Status from './Components/Status';
-import UserDisplay from './Components/UserDisplay';
+import Status from './components/Status';
+import UserDisplay from './components/UserDisplay';
 import USERS from "./data/USERS.json"
-import Tabs from './Components/Tabs';
+import Tabs from './components/Tabs';
 
 function App() {
 

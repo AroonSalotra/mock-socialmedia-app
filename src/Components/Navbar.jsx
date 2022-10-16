@@ -15,15 +15,15 @@ const Navbar = () => {
             { text: "Gaming" },
         ],
         listB: [
-            { icon: <AiFillMessage /> },
-            { icon: <AiFillCustomerService /> },
-            { icon: <AiFillNotification /> }
+            { icon: <AiFillMessage />, id: "icon-nav-msg" },
+            { icon: <AiFillCustomerService />, id: "icon-nav-csv" },
+            { icon: <AiFillNotification />, id: "icon-nav-not" }
         ]
     }
 
-    const classList = "flex flex-col items-center gap-0 sm:flex-row justify-center gap-5 py-2 bg-gray-800"
 
-    // translate-x-1/2 left-1/2 w-full
+
+    const classList = "flex flex-col items-center gap-0 sm:flex-row justify-center gap-5 py-2 bg-gray-800"
 
     return (
         <nav className="fixed w-full -translate-x-1/2 border-b-2 border-gray-900 px-4  left-1/2 bg-gray-800 hidden lg:block">
@@ -36,7 +36,6 @@ const Navbar = () => {
 
                 <Status />
 
-                {/* <SearchBar /> */}
                 <ListItem
                     classList={classList}
                     data={data.listB}>

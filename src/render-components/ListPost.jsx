@@ -1,5 +1,5 @@
-import Post from "../Components/Post";
-import UserDisplay from "../Components/UserDisplay";
+import Post from "../components/Post";
+import UserDisplay from "../components/UserDisplay";
 
 const ListPost = (props) => {
 
@@ -31,7 +31,6 @@ const ListPost = (props) => {
             posterID: 4,
             postLink: "https://www.dailymail.co.uk/sport/boxing/article-11320987/Referee-intervenes-STOP-Caleb-Plants-gravedigging-celebration-rival-KOd.html"
         }
-
     ]
 
     return (
@@ -44,6 +43,7 @@ const ListPost = (props) => {
                     postImg={postImg}
                     postText={postText}
                     postLink={postLink}
+                    key={postDate + posterID + postText}
                 />
             })}
         </section>

@@ -1,4 +1,4 @@
-import ListItem from ".././render-components/ListItem";
+import ListItem from "../render-components/ListItem";
 
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
 
