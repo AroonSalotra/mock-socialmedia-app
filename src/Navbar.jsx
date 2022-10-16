@@ -1,26 +1,43 @@
 import SearchBar from "./SearchBar";
+import { AiFillMessage, AiFillCustomerService, AiFillNotification } from "react-icons/ai"
 
 import ListItem from "./render-components/ListItem";
 
 const Navbar = () => {
 
-    const data = [
-        { text: "Home" },
-        { text: "Watch" },
-        { text: "Marketplace" },
-        { text: "Gaming" },
-    ]
+    const data = {
+        listA: [
+            { text: "Home" },
+            { text: "Watch" },
+            { text: "Marketplace" },
+            { text: "Gaming" },
+        ],
+        listB: [
+            { icon: <AiFillMessage /> },
+            { icon: <AiFillCustomerService /> },
+            { icon: <AiFillNotification /> }
+        ]
+    }
 
     const classList = "flex flex-col items-center gap-0 sm:flex-row justify-center gap-5 py-2 bg-gray-800"
 
-    return (
-        <nav className="bg-orange-300">
+    // translate-x-1/2 left-1/2 w-full
 
-            <ListItem
-                classList={classList}
-                data={data}>
-                <SearchBar />
-            </ListItem>
+    return (
+        <nav className="fixed w-full -translate-x-1/2 left-1/2 hidden lg:block">
+
+            <div className="flex justify-center">
+                <ListItem
+                    classList={classList}
+                    data={data.listA}>
+                    <SearchBar />
+                </ListItem>
+
+                <ListItem
+                    classList={classList}
+                    data={data.listB}>
+                </ListItem>
+            </div>
 
         </nav>
     );

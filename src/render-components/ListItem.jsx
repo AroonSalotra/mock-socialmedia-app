@@ -17,7 +17,7 @@ const ListItem = (props) => {
                         {icon ?
                             <span className="text-3xl px-4">
                                 {icon}</span> : null}
-                        {text}
+                        {text ? text : null}
                     </li>
                     :
                     // Return <li without onclick otherwise
@@ -25,7 +25,8 @@ const ListItem = (props) => {
                         {icon ?
                             <span className="text-3xl px-4">
                                 {icon}</span> : null}
-                        {text}
+                        {text ? text : null}
+
                     </li>
             })}
 

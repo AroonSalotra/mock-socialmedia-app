@@ -40,10 +40,12 @@ function App() {
     <>
       <div className="text-white bg-gray-800">
         <Navbar />
-        {/* <Comment /> */}
-        <Status />
-        <Tabs />
-        <ListPost />
+        <div className='lg:py-20'>
+          {/* <Comment /> */}
+          <Status />
+          <Tabs />
+          <ListPost />
+        </div>
       </div>
     </>
   );
