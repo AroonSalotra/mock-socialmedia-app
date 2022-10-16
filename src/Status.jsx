@@ -3,26 +3,26 @@ import UserDisplay from "./UserDisplay";
 const Status = () => {
     return (
         <>
-            <div className="m-auto p-4 bg-gray-900 text-white 
+            <div className="text-white flex
             lg:w-50rem">
 
-                <UserDisplay
+                {/* <UserDisplay
                     userClass="py-4"
-                 />
+                 /> */}
 
                 <input
-                    className="text w-full p-4 rounded-full h-12 bg-gray-600"
+                    className="text w-7/12 m-auto rounded-full h-2/4 bg-gray-600 my-4 px-4"
                     type="text"
                     placeholder="Set your status here"
                 />
 
-                <hr className="my-3" />
+                {/* <hr className="" /> */}
 
-                <ul className="flex justify-between px-8 py-2">
+                {/* <ul className="flex justify-between px-8 py-2">
                     <li>Live Video</li>
                     <li>Upload Photo</li>
                     <li>Set Activity</li>
-                </ul>
+                </ul> */}
 
             </div>
         </>

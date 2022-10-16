@@ -1,5 +1,7 @@
 import SearchBar from "./SearchBar";
 import { AiFillMessage, AiFillCustomerService, AiFillNotification } from "react-icons/ai"
+import Status from './Status';
+
 
 import ListItem from "./render-components/ListItem";
 
@@ -24,15 +26,17 @@ const Navbar = () => {
     // translate-x-1/2 left-1/2 w-full
 
     return (
-        <nav className="fixed w-full -translate-x-1/2 left-1/2 hidden lg:block">
+        <nav className="fixed w-full -translate-x-1/2 border-b-2 border-gray-900 px-4  left-1/2 bg-gray-800 hidden lg:block">
 
-            <div className="flex justify-center">
+            <div className="flex justify-between">
                 <ListItem
                     classList={classList}
                     data={data.listA}>
-                    <SearchBar />
                 </ListItem>
 
+                <Status />
+
+                {/* <SearchBar /> */}
                 <ListItem
                     classList={classList}
                     data={data.listB}>

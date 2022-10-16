@@ -30,8 +30,8 @@ const Contacts = () => {
     ]
 
     return (
-        <section className="fixed right-20">
-            <h3 className="text-2xl">Online Contacts</h3>
+        <section className="fixed right-20 hidden lg:block">
+            <h3 className="text-2xl font-semibold">Online Contacts</h3>
             <div className="flex flex-col gap-5 py-4">
                 {DATA.map(({ userName, userImg }) => {
                     return <UserDisplay

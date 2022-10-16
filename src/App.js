@@ -44,7 +44,7 @@ function App() {
         <div className='lg:py-20'>
           <Contacts />
           {/* <Comment /> */}
-          <Status />
+          {/* <Status /> */}
           <Tabs />
           <ListPost />
         </div>

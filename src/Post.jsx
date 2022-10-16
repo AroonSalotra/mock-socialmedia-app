@@ -8,7 +8,7 @@ const Post = (props) => {
     return (
         <>
             <div
-                className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mt-4 md:w-50rem">
+                className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 md:w-50rem lg:mt-4">
 
                 <div className="py-2">
                     <UserDisplay
@@ -19,7 +19,7 @@ const Post = (props) => {
                         {`Posted on ${postDate}`}</p>
                 </div>
 
-                <p className="text-xl p-4">
+                <p className="text-xl p-4 w-full lg:pl-12">
                     {postText}
                 </p>
 
