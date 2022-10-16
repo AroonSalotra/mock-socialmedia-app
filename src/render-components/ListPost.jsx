@@ -12,14 +12,20 @@ const ListPost = (props) => {
             postText: "Lovely day at the beach",
         },
         {
-            posterID: 1,
-            postDate: "12/10/2022",
-            postText: "Austria 2018",
-            postImg: "https://images.unsplash.com/photo-1665440659316-c290791ccbca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            posterID: 3,
+            postDate: "15/10/2022",
+            postText: "Skiing Holiday",
+            postImg: "https://images.unsplash.com/photo-1665859223778-25a4e39b259e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
         },
         {
             posterID: 2,
             postText: "My name is Lewis!",
+        },
+        {
+            posterID: 1,
+            postDate: "12/10/2022",
+            postText: "Austria 2018",
+            postImg: "https://images.unsplash.com/photo-1665440659316-c290791ccbca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
         },
 
     ]
