@@ -10,6 +10,8 @@ import ListPost from './render-components/ListPost';
 import Status from './Status';
 import Tabs from './Tabs';
 import UserDisplay from './UserDisplay';
+// src/data/USERS.json
+import USERS from "./data/USERS.json"
 
 function App() {
 
@@ -42,11 +44,11 @@ function App() {
       <div className="text-white bg-gray-800">
         <Navbar />
         <div className='lg:py-20'>
-          <Contacts />
+          <Contacts users={USERS} />
           {/* <Comment /> */}
           {/* <Status /> */}
           <Tabs />
-          <ListPost />
+          <ListPost users={USERS} />
         </div>
       </div>
     </>

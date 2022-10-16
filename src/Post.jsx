@@ -13,10 +13,11 @@ const Post = (props) => {
                 <div className="py-2">
                     <UserDisplay
                         userName={userName}
-                        userImg={userImg}/>
+                        userImg={userImg} />
 
                     <p className="text-gray-400 text-center">
                         {`Posted on ${postDate}`}</p>
+
                 </div>
 
                 <p className="text-xl p-4 w-full lg:pl-12">
