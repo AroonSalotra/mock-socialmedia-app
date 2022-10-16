@@ -1,4 +1,5 @@
 import Comment from './Comment';
+import Contacts from './Contacts';
 import logo from './logo.svg';
 // import './App.css';
 // import './index.css';
@@ -41,6 +42,7 @@ function App() {
       <div className="text-white bg-gray-800">
         <Navbar />
         <div className='lg:py-20'>
+          <Contacts />
           {/* <Comment /> */}
           <Status />
           <Tabs />
