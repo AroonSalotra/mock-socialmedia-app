@@ -1,5 +1,5 @@
-import Post from "../Post";
-import UserDisplay from "../UserDisplay";
+import Post from "../Components/Post";
+import UserDisplay from "../Components/UserDisplay";
 
 const ListPost = (props) => {
 

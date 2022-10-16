@@ -1,4 +1,4 @@
-import ListItem from "./render-components/ListItem";
+import ListItem from "../render-components/ListItem";
 import UserDisplay from "./UserDisplay";
 
 const Contacts = (props) => {

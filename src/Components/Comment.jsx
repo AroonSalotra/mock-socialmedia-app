@@ -2,7 +2,7 @@ import UserDisplay from "./UserDisplay";
 import { useEffect, useState } from "react";
 import ViewComments from "./ViewComments";
 import { BsArrowBarUp } from "react-icons/bs"
-import ListItem from "./render-components/ListItem";
+import ListItem from "../render-components/ListItem";
 
 const Comment = (props) => {
     const [currentComment, setCurrentComment] = useState("")

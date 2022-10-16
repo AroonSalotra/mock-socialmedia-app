@@ -1,4 +1,4 @@
-import ListItem from "./render-components/ListItem";
+import ListItem from "../render-components/ListItem";
 import UserDisplay from "./UserDisplay";
 import Comment from "./Comment";
 

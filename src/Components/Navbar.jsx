@@ -3,7 +3,7 @@ import { AiFillMessage, AiFillCustomerService, AiFillNotification } from "react-
 import Status from './Status';
 
 
-import ListItem from "./render-components/ListItem";
+import ListItem from "../render-components/ListItem";
 
 const Navbar = () => {
 

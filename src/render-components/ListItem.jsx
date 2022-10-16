@@ -1,4 +1,4 @@
-import SearchBar from "../SearchBar";
+import SearchBar from "../Components/SearchBar";
 
 const ListItem = (props) => {
     const { data, classList, query } = props;
