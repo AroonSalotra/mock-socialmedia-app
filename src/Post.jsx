@@ -5,12 +5,6 @@ import Comment from "./Comment";
 const Post = (props) => {
     const { userName, postDate, userImg, postImg, postText } = props
 
-    const postInteraction = [
-        { text: "Like" },
-        { text: "Comment", clickEffect: "" },
-        { text: "Share" },
-    ]
-
     return (
         <>
             <div
@@ -37,11 +31,6 @@ const Post = (props) => {
                         alt={`${postImg}'s post on ${postDate}`} />
                     :
                     null}
-
-                {/* <ListItem
-                    classList={"flex justify-around w-full"}
-                    data={postInteraction} /> */}
-
                 <hr className="w-11/12" />
 
                 <Comment

@@ -11,6 +11,7 @@ const Comment = (props) => {
 
     const handleShowInput = () => {
         const checkState = showInput === "hidden"
+
         setShowInput(
             checkState ? "block" : "hidden"
         )
@@ -18,7 +19,7 @@ const Comment = (props) => {
 
     const postInteraction = [
         { text: "Like" },
-        { text: "Comment", clickEffect: handleShowInput },
+        { text: "Comments", clickEffect: handleShowInput },
         { text: "Share" },
     ]
 
@@ -34,31 +35,24 @@ const Comment = (props) => {
         } return null
     }
 
-
-
-    console.log(currentComment)
-
-    const tempImg = "https://st4.depositphotos.com/11634452/41441/v/600/depositphotos_414416674-stock-illustration-picture-profile-icon-male-icon.jpg"
-
     return (
         <>
             <ListItem
                 classList={"flex justify-around w-full"}
                 data={postInteraction} />
 
-            <ViewComments>
+            <ViewComments
+                classList={showInput} >
                 {prevComment}
             </ViewComments>
 
             <div className={`flex gap-x-4 py-2 ${showInput}`}>
 
                 <UserDisplay
-                    userImg={tempImg}
                     showName={false} />
 
                 <form action=""
                     onSubmit={(e) => e.preventDefault(e)}>
-
 
                     <input
                         className="text-white font-semibold h-fit p-2.5 rounded-full items-baseline w-10/12 resize-none bg-gray-600 lg:w-96"
@@ -69,9 +63,9 @@ const Comment = (props) => {
                     <button
                         onClick={() => handleClick()}
                         type="submit">
-                        <span className="text-4xl hidden md:block">
+                        {/* <span className="text-4xl hidden md:block">
                             <BsArrowBarUp />
-                        </span>
+                        </span> */}
                     </button>
 
                 </form>
@@ -82,16 +76,3 @@ const Comment = (props) => {
 }
 
 export default Comment;
-
-/* 
-<textarea
-                 className="text-white font-semibold h-fit p-2.5 rounded-full items-baseline w-10/12 resize-none bg-gray-600 lg:w-96"
-                 placeholder="Comment on this post"
-                 name=""
-                 id=""
-                 cols="30"
-                 rows="1"
-                 onChange={(e) => handleChange(e)}
-                 value={currentComment}
-             /> 
-             */
