@@ -7,7 +7,7 @@ const Contacts = (props) => {
     const userFilter = users.slice(0)
 
     return (
-        <section className="fixed right-10 hidden py-2 lg:block">
+        <section className="fixed right-1 hidden py-2 xl:block">
             <h3 className="text-2xl font-semibold">Online Contacts</h3>
 
             <div className="flex flex-col gap-5 py-4">
@@ -17,7 +17,7 @@ const Contacts = (props) => {
                         showStatus={true}
                         userName={userName}
                         hoverEffect={true}
-                        userClass={"w-60"}
+                        userClass={"w-64"}
                         key={userId}
                     />
                 })}

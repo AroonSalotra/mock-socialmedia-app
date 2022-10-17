@@ -21,7 +21,7 @@ const Tabs = () => {
 
     return (
         <>
-            <div className="fixed top-20">
+            <div className="fixed hidden top-20 xl:block">
                 <ListItem
                     classList={classList}
                     data={DATA} />

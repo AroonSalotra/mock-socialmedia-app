@@ -21,8 +21,6 @@ const Navbar = () => {
         ]
     }
 
-
-
     const classList = "flex flex-col items-center gap-0 sm:flex-row justify-center gap-5 py-2 bg-gray-800"
 
     return (
