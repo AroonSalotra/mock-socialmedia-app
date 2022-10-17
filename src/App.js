@@ -15,7 +15,7 @@ function App() {
       <div className="text-white bg-gray-800">
 
         <Navbar />
-        <div className='lg:py-20'>
+        <div className='py-20'>
           <Contacts users={USERS} />
           <Tabs />
           <ListPost users={USERS} />

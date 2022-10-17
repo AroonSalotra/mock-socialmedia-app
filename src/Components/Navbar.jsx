@@ -1,11 +1,19 @@
 import SearchBar from "./SearchBar";
 import { AiFillMessage, AiFillCustomerService, AiFillNotification } from "react-icons/ai"
+import { GiHamburgerMenu } from "react-icons/gi"
 import Status from './Status';
 
-
 import ListItem from "../render-components/ListItem";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [display, setDisplay] = useState("hidden")
+
+    const handleClick = () => {
+        display === "hidden" ?
+            setDisplay(state => "") :
+            setDisplay(state => "hidden")
+    }
 
     const data = {
         listA: [
@@ -21,21 +29,27 @@ const Navbar = () => {
         ]
     }
 
-    const classList = "flex flex-col items-center gap-0 sm:flex-row justify-center gap-5 py-2 bg-gray-800"
 
     return (
-        <nav className="fixed w-full -translate-x-1/2 border-b-2 border-gray-900 px-4  left-1/2 bg-gray-800 hidden lg:block">
+        <nav className="fixed w-full -translate-x-1/2 left-1/2 lg:block">
 
-            <div className="flex justify-between">
+            <div className="flex justify-between px-5 bg-gray-800 text-2xl lg:border-b border-gray-900">
+
+                <button
+                    onClick={() => handleClick()}
+                    className="h-fit lg:hidden">
+                    <GiHamburgerMenu className="text-3xl" />
+                </button>
+
                 <ListItem
-                    classList={classList}
+                    ulClass={`${display} gap-5 text-1xl px-4 pb-2 lg:flex flex-row items-center`}
                     data={data.listA}>
                 </ListItem>
 
-                <Status />
+                {/* <Status /> */}
 
                 <ListItem
-                    classList={classList}
+                    ulClass={"flex flex-row w-full justify-end gap-10 px-4 lg:justify-end gap-10"}
                     data={data.listB}>
                 </ListItem>
             </div>

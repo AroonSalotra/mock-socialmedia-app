@@ -1,31 +1,39 @@
 import SearchBar from "../components/SearchBar";
 
 const ListItem = (props) => {
-    const { data, classList, query } = props;
+    const { data, ulClass, liClass, iconClass } = props;
 
-    const thisClass = "hover:bg-gray-700 cursor-pointer flex py-4 px-4 rounded-md"
+    const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md"
+
+
+    const verifyLiClass = liClass ? liClass : ""
+    const verifyUlClass = ulClass ? ulClass : ""
 
     return (
         <ul
-            className={classList} >
+            className={verifyUlClass} >
             {props.children}
             {data.map(({ text, icon, clickEffect, id }) => {
                 return clickEffect ?
                     // Return <li with onclick if key exists
                     <li key={text ? text : id}
                         onClick={() => clickEffect()}
-                        className={thisClass}>
+                        className={`${hoverClass} ${verifyLiClass}`}>
                         {icon ?
-                            <span className="text-3xl px-4">
+                            <span className={iconClass ?
+                                iconClass : "text-3xl px-4"}>
+
                                 {icon}</span> : null}
                         {text ? text : null}
                     </li>
                     :
                     // Return <li without onclick otherwise
                     <li key={text ? text : id}
-                        className={thisClass}>
+                        className={`${hoverClass} ${verifyLiClass}`}>
                         {icon ?
-                            <span className="text-3xl px-4">
+                            <span className={iconClass ?
+                                iconClass : "text-3xl px-4"}>
+
                                 {icon}</span> : null}
                         {text ? text : null}
                     </li>

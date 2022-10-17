@@ -17,13 +17,14 @@ const Tabs = () => {
         { text: "Most Recent", icon: <FcRatings /> },
     ]
 
-    const classList = "flex flex-col py-1 gap-1 pr-1 w-fit text-lg hidden lg:flex bg-gray-800"
+    const classList = "flex flex-col py-1 gap-0 text-lg hidden lg:flex gap-10 bg-gray-800"
 
     return (
         <>
-            <div className="fixed hidden top-20 xl:block">
+            <div className="fixed hidden top-36 xl:block">
                 <ListItem
-                    classList={classList}
+                    ulClass={classList}
+                    liClass="flex"
                     data={DATA} />
             </div>
         </>
