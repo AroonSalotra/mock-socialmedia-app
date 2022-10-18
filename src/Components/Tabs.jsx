@@ -17,7 +17,7 @@ const Tabs = () => {
         { text: "Most Recent", icon: <FcRatings /> },
     ]
 
-    const classList = "flex flex-col py-1 gap-0 text-lg hidden lg:flex gap-10 bg-gray-800"
+    const classList = "flex flex-col py-1 gap-10 text-lg hidden lg:flex gap-10 bg-gray-800"
 
     return (
         <>

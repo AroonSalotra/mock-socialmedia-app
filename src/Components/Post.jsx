@@ -41,8 +41,7 @@ const Post = (props) => {
                 <hr className="w-11/12" />
 
                 <Comment
-                    userImg={userImg}
-                />
+                    userImg={userImg} />
 
 
             </div>

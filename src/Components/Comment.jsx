@@ -38,7 +38,7 @@ const Comment = (props) => {
     return (
         <>
             <ListItem
-                classList={"flex justify-around w-full"}
+                ulClass={"flex justify-around w-full"}
                 data={postInteraction} />
 
             <ViewComments
