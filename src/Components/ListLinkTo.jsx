@@ -17,7 +17,7 @@ const ListLinkTo = (props) => {
             {data.map(({ text, icon, clickEffect, id, linkTo }) => {
                 return clickEffect ?
                     // Return <li with onclick if key exists
-                    <Link to={linkTo} key={text ? text : id}
+                    <Link to={`/mock-socialmedia-app/${linkTo}`} key={text ? text : id}
                         onClick={() => clickEffect()}
                         className={`${hoverClass} ${verifyLiClass}`}>
                         {icon ?
@@ -29,7 +29,7 @@ const ListLinkTo = (props) => {
                     </Link>
                     :
                     // Return <li without onclick otherwise
-                    <Link to={linkTo} key={text ? text : id}
+                    <Link to={`/mock-socialmedia-app/${linkTo}`} key={text ? text : id}
                         className={`${hoverClass} ${verifyLiClass}`}>
                         {icon ?
                             <span className={iconClass ?

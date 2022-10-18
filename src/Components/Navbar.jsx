@@ -20,10 +20,10 @@ const Navbar = () => {
 
     const data = {
         listA: [
-            { text: "Home", linkTo: `${baseUrl}home` },
+            { text: "Home", linkTo: "home" },
             { text: "Watch" },
-            { text: "Marketplace", linkTo: `${baseUrl}marketplace` },
-            { text: "Gaming" },
+            { text: "Marketplace", linkTo: "marketplace" },
+            { text: "Gaming", linkTo: "gaming" },
         ],
         listB: [
             { icon: <AiFillMessage />, id: "icon-nav-msg" },
@@ -34,9 +34,9 @@ const Navbar = () => {
 
 
     return (
-        <nav className="fixed w-full -translate-x-1/2 left-1/2 lg:block">
+        <nav className="fixed -translate-x-1/2 left-1/2 lg:block w-full">
 
-            <div className="flex justify-between px-5 bg-gray-800 text-2xl lg:border-b border-gray-900">
+            <div className="flex px-5 bg-gray-800 w-fit text-2xl lg:w-full border-b border-gray-900">
 
                 <button
                     onClick={() => handleClick()}
@@ -50,7 +50,7 @@ const Navbar = () => {
                 </ListItem> */}
 
                 <ListLinkTo
-                    ulClass={`${display} bg-gray-800 absolute left-14 text-1xl px-4 pb-2 lg:flex gap-5 flex-row items-center mt-7`}
+                    ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center justify-between`}
                     data={data.listA}>
                 </ListLinkTo>
 
