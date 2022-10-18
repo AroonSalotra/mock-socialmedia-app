@@ -21,12 +21,12 @@ const Tabs = () => {
 
     return (
         <>
-            <div className="fixed hidden top-36 xl:block">
+            <section className="fixed hidden top-36 xl:block">
                 <ListItem
                     ulClass={classList}
                     liClass="flex"
                     data={DATA} />
-            </div>
+            </section>
         </>
     );
 }
