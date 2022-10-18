@@ -1,7 +1,6 @@
 import UserDisplay from "./UserDisplay";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ViewComments from "./ViewComments";
-import { BsArrowBarUp } from "react-icons/bs"
 import ListItem from "../render-components/ListItem";
 
 const Comment = (props) => {

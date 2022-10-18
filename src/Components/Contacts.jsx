@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ListItem from "../render-components/ListItem";
 import UserDisplay from "./UserDisplay";
 import { AiFillMessage } from "react-icons/ai"
 

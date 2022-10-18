@@ -1,5 +1,3 @@
-import SearchBar from "../components/SearchBar";
-
 const ListItem = (props) => {
     const { data, ulClass, liClass, iconClass } = props;
 

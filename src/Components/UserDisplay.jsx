@@ -1,5 +1,5 @@
 const UserDisplay = (props) => {
-    const { userName, postDate, userImg, postImg, userClass, showStatus, hoverEffect } = props
+    const { userName, userImg, userClass, showStatus, hoverEffect } = props
 
     const placeholderImg = "https://st4.depositphotos.com/11634452/41441/v/600/depositphotos_414416674-stock-illustration-picture-profile-icon-male-icon.jpg"
 
