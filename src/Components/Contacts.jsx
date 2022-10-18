@@ -8,15 +8,12 @@ const Contacts = (props) => {
 
     const userFilter = users.slice(0)
 
-    const handleClick = () => display === "hidden" ?
-    setDisplay(state => "")
-        :
-        setDisplay(state => "hidden")
+    const handleClick = () => {
+        display === "hidden" ?
+            setDisplay(state => "") :
+            setDisplay(state => "hidden")
+    }
 
-
-    useEffect(() => {
-        console.log(display)
-    }, [display])
 
     // fixed bg-gray-800 transition-all xl:relative flex flex-col gap-5 py-4
     return (

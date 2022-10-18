@@ -4,6 +4,7 @@ const ListPost = (props) => {
 
     const { users, posts } = props;
 
+
     return (
         <section>
             {posts.map(({ postDate, postImg, postText, posterID, postLink }) => {

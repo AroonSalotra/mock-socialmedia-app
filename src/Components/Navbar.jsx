@@ -42,14 +42,14 @@ const Navbar = () => {
                 </button>
 
                 <ListItem
-                    ulClass={`${display} gap-5 text-1xl px-4 pb-2 lg:flex flex-row items-center`}
+                    ulClass={`${display} bg-gray-800 absolute left-14 text-1xl px-4 pb-2 lg:flex gap-5 flex-row items-center mt-7`}
                     data={data.listA}>
                 </ListItem>
 
                 {/* <Status /> */}
 
                 <ListItem
-                    ulClass={"flex flex-row w-full justify-end gap-10 px-4 lg:justify-end gap-10"}
+                    ulClass={"hidden flex-row w-full justify-end gap-10 px-4 lg:flex justify-end gap-10"}
                     data={data.listB}>
                 </ListItem>
             </div>
