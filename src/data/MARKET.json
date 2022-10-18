@@ -1,0 +1,90 @@
+[
+    {
+        "item": "iPhone 6s",
+        "itemImg": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=832&q=80",
+        "price": 250,
+        "sellerName": "Todd Howard",
+        "posterID": 2,
+        "text": "Sister's old iphone, still works"
+    },
+    {
+        "item": "Xbox One S",
+        "itemImg": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1619&q=80",
+        "price": 300,
+        "sellerName": "Lunch McGowan",
+        "posterID": 4,
+        "text": "Works fine, slight scratch on front left corner"
+    },
+    {
+        "item": "Crock Pot",
+        "itemImg": "https://images.unsplash.com/photo-1612293905642-5aaa88632115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "price": 14,
+        "posterID": 5
+    },
+    {
+        "item": "iPhone 6s",
+        "itemImg": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=832&q=80",
+        "price": 250,
+        "sellerName": "Todd Howard",
+        "posterID": 2,
+        "text": "Sister's old iphone, still works"
+    },
+    {
+        "item": "Xbox One S",
+        "itemImg": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1619&q=80",
+        "price": 300,
+        "sellerName": "Lunch McGowan",
+        "posterID": 4,
+        "text": "Works fine, slight scratch on front left corner"
+    },
+    {
+        "item": "Crock Pot",
+        "itemImg": "https://images.unsplash.com/photo-1612293905642-5aaa88632115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "price": 14,
+        "posterID": 5
+    },
+    {
+        "item": "iPhone 6s",
+        "itemImg": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=832&q=80",
+        "price": 250,
+        "sellerName": "Todd Howard",
+        "posterID": 2,
+        "text": "Sister's old iphone, still works"
+    },
+    {
+        "item": "Xbox One S",
+        "itemImg": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1619&q=80",
+        "price": 300,
+        "sellerName": "Lunch McGowan",
+        "posterID": 4,
+        "text": "Works fine, slight scratch on front left corner"
+    },
+    {
+        "item": "Crock Pot",
+        "itemImg": "https://images.unsplash.com/photo-1612293905642-5aaa88632115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "price": 14,
+        "posterID": 5
+    },
+    {
+        "item": "iPhone 6s",
+        "itemImg": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=832&q=80",
+        "price": 250,
+        "sellerName": "Todd Howard",
+        "posterID": 2,
+        "text": "Sister's old iphone, still works"
+    },
+    {
+        "item": "Xbox One S",
+        "itemImg": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1619&q=80",
+        "price": 300,
+        "sellerName": "Lunch McGowan",
+        "posterID": 4,
+        "text": "Works fine, slight scratch on front left corner"
+    },
+    {
+        "item": "Crock Pot",
+        "itemImg": "https://images.unsplash.com/photo-1612293905642-5aaa88632115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "price": 14,
+        "posterID": 5
+    }
+]

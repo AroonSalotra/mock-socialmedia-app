@@ -1,4 +1,4 @@
-import Post from "../components/Post";
+import Post from "./Post";
 
 const ListPost = (props) => {
 
@@ -16,6 +16,7 @@ const ListPost = (props) => {
                     postText={postText}
                     postLink={postLink}
                     key={postDate + posterID + postText}
+                    imgClass="w-full h-auto"
                 />
             })}
         </section>

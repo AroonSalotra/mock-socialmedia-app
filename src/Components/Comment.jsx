@@ -1,7 +1,7 @@
 import UserDisplay from "./UserDisplay";
 import { useState } from "react";
 import ViewComments from "./ViewComments";
-import ListItem from "../render-components/ListItem";
+import ListItem from "./ListItem";
 
 const Comment = (props) => {
     const [currentComment, setCurrentComment] = useState("")

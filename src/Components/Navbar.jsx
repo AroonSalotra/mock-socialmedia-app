@@ -2,12 +2,14 @@ import SearchBar from "./SearchBar";
 import { AiFillMessage, AiFillCustomerService, AiFillNotification } from "react-icons/ai"
 import { GiHamburgerMenu } from "react-icons/gi"
 import Status from './Status';
-
-import ListItem from "../render-components/ListItem";
+import { Link } from "react-router-dom";
+import ListLinkTo from "./ListLinkTo";
+import ListItem from "./ListItem";
 import { useState } from "react";
 
 const Navbar = () => {
     const [display, setDisplay] = useState("hidden")
+    const baseUrl = "mock-socialmedia-app/"
 
     const handleClick = () => {
         display === "hidden" ?
@@ -15,11 +17,12 @@ const Navbar = () => {
             setDisplay(state => "hidden")
     }
 
+
     const data = {
         listA: [
-            { text: "Home" },
+            { text: "Home", linkTo: `${baseUrl}home` },
             { text: "Watch" },
-            { text: "Marketplace" },
+            { text: "Marketplace", linkTo: `${baseUrl}marketplace` },
             { text: "Gaming" },
         ],
         listB: [
@@ -41,10 +44,15 @@ const Navbar = () => {
                     <GiHamburgerMenu className="text-3xl" />
                 </button>
 
-                <ListItem
+                {/* <ListItem
                     ulClass={`${display} bg-gray-800 absolute left-14 text-1xl px-4 pb-2 lg:flex gap-5 flex-row items-center mt-7`}
                     data={data.listA}>
-                </ListItem>
+                </ListItem> */}
+
+                <ListLinkTo
+                    ulClass={`${display} bg-gray-800 absolute left-14 text-1xl px-4 pb-2 lg:flex gap-5 flex-row items-center mt-7`}
+                    data={data.listA}>
+                </ListLinkTo>
 
                 {/* <Status /> */}
 
