@@ -6,7 +6,7 @@ const ListPost = (props) => {
 
 
     return (
-        <section>
+        <section className="flex flex-col gap-16">
             {posts.map(({ postDate, postImg, postText, posterID, postLink }) => {
                 return <Post
                     userName={users[posterID].userName}

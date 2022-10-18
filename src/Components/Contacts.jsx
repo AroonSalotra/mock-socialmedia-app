@@ -28,7 +28,7 @@ const Contacts = (props) => {
                             showStatus={true}
                             userName={userName}
                             hoverEffect={true}
-                            userClass={""}
+                            userClass={"lg:w-64"}
                             key={userId}
                         />
                     })}

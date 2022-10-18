@@ -7,7 +7,7 @@ const Post = (props) => {
     return (
         <>
             <div
-                className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 md:w-50rem lg:mt-4">
+                className="flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full lg:w-50rem mt-4">
 
                 <div className="py-2 px-8 bg-gray-800 rounded-b-lg lg:">
                     <UserDisplay
