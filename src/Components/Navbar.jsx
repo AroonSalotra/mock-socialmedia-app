@@ -9,7 +9,6 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [display, setDisplay] = useState("hidden")
-    const baseUrl = "mock-socialmedia-app/"
 
     const handleClick = () => {
         display === "hidden" ?
@@ -18,10 +17,10 @@ const Navbar = () => {
     }
 
 
-    const data = {
+    const navbarContent = {
         listA: [
             { text: "Home", linkTo: "home" },
-            { text: "Watch" },
+            // { text: "Watch" },
             { text: "Marketplace", linkTo: "marketplace" },
             { text: "Gaming", linkTo: "gaming" },
         ],
@@ -44,21 +43,16 @@ const Navbar = () => {
                     <GiHamburgerMenu className="text-3xl" />
                 </button>
 
-                {/* <ListItem
-                    ulClass={`${display} bg-gray-800 absolute left-14 text-1xl px-4 pb-2 lg:flex gap-5 flex-row items-center mt-7`}
-                    data={data.listA}>
-                </ListItem> */}
-
                 <ListLinkTo
                     ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center justify-between`}
-                    data={data.listA}>
+                    data={navbarContent.listA}>
                 </ListLinkTo>
 
                 {/* <Status /> */}
 
                 <ListItem
                     ulClass={"hidden flex-row w-full justify-end gap-10 px-4 lg:flex justify-end gap-10"}
-                    data={data.listB}>
+                    data={navbarContent.listB}>
                 </ListItem>
             </div>
 

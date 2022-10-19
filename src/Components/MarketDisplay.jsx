@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import MARKET from "../data/MARKET.json"
 import MarketItem from "./MarketItem";
 import Post from "./Post";
@@ -5,12 +6,10 @@ import Post from "./Post";
 const MarketDisplay = (props) => {
     const { users } = props
 
-    console.log(MARKET)
-
     return (
         <section className="">
             <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>
-            <div className="flex flex-wrap justify-center lg:grid grid-cols-4 gap-5 px-20 3xl:flex">
+            <div className="flex flex-wrap gap-5 justify-center lg:grid grid-cols-4 px-20 3xl:grid-cols-6">
                 {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
                     return <MarketItem
                         item={item}
@@ -29,7 +28,7 @@ const MarketDisplay = (props) => {
                         item={item}
                         price={price}
                         // postText={text}
-                        imgClass="w-64 h-64 object-cover"
+                        imgClass="w-full h-64 object-cover"
                     />
                 })}
             </div>

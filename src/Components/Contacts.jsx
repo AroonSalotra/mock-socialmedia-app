@@ -21,7 +21,7 @@ const Contacts = (props) => {
             <section className="fixed right-5 py-2">
                 {/* <h3>Online Contacts</h3> */}
 
-                <div className={`flex flex-col ${display} mt-96 bg-gray-800 xl:flex mt-10`}>
+                <div className={`flex flex-col ${display} translate-y-48 bg-gray-800 xl:flex xl:translate-y-0 mt-10`}>
                     {userFilter.map(({ userName, userImg, userId }) => {
                         return <UserDisplay
                             userImg={userImg}
@@ -35,10 +35,10 @@ const Contacts = (props) => {
                 </div>
 
                 <button
-                    className="fixed bottom-10 right-20 xl:hidden"
+                    className="fixed bottom-20 right-10 xl:hidden"
                     onClick={() => handleClick()}
                 >
-                    <AiFillMessage className="text-4xl" />
+                    <AiFillMessage className="text-5xl" />
                 </button>
 
             </section>
