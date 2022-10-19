@@ -10,7 +10,7 @@ const MarketDisplay = (props) => {
     return (
         <section className="">
             <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>
-            <div className="flex flex-wrap justify-center lg:grid grid-cols-4 gap-5 px-20">
+            <div className="flex flex-wrap justify-center lg:grid grid-cols-4 gap-5 px-20 3xl:flex">
                 {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
                     return <MarketItem
                         item={item}

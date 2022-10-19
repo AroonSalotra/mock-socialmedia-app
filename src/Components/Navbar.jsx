@@ -36,7 +36,7 @@ const Navbar = () => {
     return (
         <nav className="fixed -translate-x-1/2 left-1/2 lg:block w-full">
 
-            <div className="flex px-5 bg-gray-800 w-fit text-2xl lg:w-full border-b border-gray-900">
+            <div className="flex px-5 bg-gray-800 w-fit text-2xl border-b border-gray-900 lg:w-full">
 
                 <button
                     onClick={() => handleClick()}
