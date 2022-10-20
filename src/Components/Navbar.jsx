@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const navbarContent = {
         listA: [
-            { text: "Home", linkTo: "home" },
+            { text: "Home", linkTo: "" },
             // { text: "Watch" },
             { text: "Marketplace", linkTo: "marketplace" },
             { text: "Gaming", linkTo: "gaming" },

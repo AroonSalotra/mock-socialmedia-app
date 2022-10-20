@@ -18,7 +18,7 @@ function App() {
 
           <Routes>
 
-            <Route path='/mock-socialmedia-app/home'
+            <Route path='/mock-socialmedia-app/'
               element={<>
                 <Contacts users={USERS} />
                 <Tabs />
