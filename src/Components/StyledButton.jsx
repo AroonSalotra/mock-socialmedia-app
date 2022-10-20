@@ -20,8 +20,3 @@ const StyledButton = (props) => {
 }
 
 export default StyledButton;
-
-{/* <ButtonTag
-    className="w-fit bg-slate-500 py-1 px-4 font-semibold rounded-md hover:bg-slate-400 active:scale-95">
-    {children}
-</ButtonTag> */}

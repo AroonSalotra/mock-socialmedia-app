@@ -1,5 +1,5 @@
 const ListItem = (props) => {
-    const { data, ulClass, liClass, iconClass } = props;
+    const { data, ulClass, liClass, iconClass, useID, clickEffect } = props;
 
     const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md"
 
@@ -16,7 +16,9 @@ const ListItem = (props) => {
                     // Return <li with onclick if key exists
                     <li key={text ? text : id}
                         onClick={() => clickEffect()}
-                        className={`${hoverClass} ${verifyLiClass}`}>
+                        className={`${hoverClass} ${verifyLiClass}`}
+                        id={text}
+                    >
                         {icon ?
                             <span className={iconClass ?
                                 iconClass : "text-3xl px-4"}>
@@ -27,7 +29,9 @@ const ListItem = (props) => {
                     :
                     // Return <li without onclick otherwise
                     <li key={text ? text : id}
-                        className={`${hoverClass} ${verifyLiClass}`}>
+                        className={`${hoverClass} ${verifyLiClass}`}
+                        id={text}
+                    >
                         {icon ?
                             <span className={iconClass ?
                                 iconClass : "text-3xl px-4"}>

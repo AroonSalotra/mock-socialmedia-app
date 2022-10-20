@@ -1,7 +1,7 @@
-import UserDisplay from "./UserDisplay";
-import USERS from "../data/USERS.json"
+import UserDisplay from "../UserDisplay";
+import USERS from "../../data/USERS.json"
 
-const Sidebar = () => {
+const Friends = () => {
     return (
         <div>
             <h3 className="text-3xl font-semibold">
@@ -17,4 +17,4 @@ const Sidebar = () => {
     );
 }
 
-export default Sidebar;
+export default Friends;
