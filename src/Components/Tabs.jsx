@@ -8,7 +8,7 @@ import StyledButton from "./StyledButton";
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
 
 const Tabs = () => {
-    const [index, setIndex] = useState(40)
+    const [index, setIndex] = useState(0)
     const [ComponentType, setComponentType] = useState(null)
 
     const DATA = [
@@ -113,9 +113,9 @@ const Tabs = () => {
 
             </section>
 
-            <StyledButton clickFunction={() => handleClick()}>
+            {/* <StyledButton clickFunction={() => handleClick()}>
                 BTN
-            </StyledButton>
+            </StyledButton> */}
             <h1>
                 {ComponentType}
             </h1>
