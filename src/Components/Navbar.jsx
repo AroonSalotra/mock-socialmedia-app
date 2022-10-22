@@ -23,7 +23,8 @@ const Navbar = () => {
             // { text: "Watch" },
             { text: "Marketplace", linkTo: "marketplace" },
             { text: "Gaming", linkTo: "gaming" },
-            { text: "Debug", linkTo: "debug" }
+            { text: "News", linkTo: "news" },
+            { text: "Debug", linkTo: "debug" },
         ],
         listB: [
             { icon: <AiFillMessage />, id: "icon-nav-msg" },

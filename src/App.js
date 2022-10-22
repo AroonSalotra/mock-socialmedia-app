@@ -9,6 +9,7 @@ import Gaming from './components/Gaming';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Debug from './components/Debug';
 import { useState } from 'react';
+import News from './components/News';
 
 function App() {
   const [marketCart, setMarketCart] = useState([])
@@ -45,6 +46,10 @@ function App() {
                 <>
                   <Gaming />
                 </>} >
+            </Route>
+
+            <Route path='/mock-socialmedia-app/news'
+              element={<News />} >
             </Route>
 
             <Route path='/mock-socialmedia-app/debug'

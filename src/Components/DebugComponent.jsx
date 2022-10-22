@@ -13,8 +13,8 @@ const DebugComponent = (props) => {
     // const { data } = useGetApi("http://api.mediastack.com/v1/news?access_key=196fc42e501a19add963f044bc4d20d0&languages=en&countries=gb")
 
     
-    const data = LocalAPi
-    console.log(data)
+    // const data = LocalAPi
+    // console.log(data)
 
 
 
