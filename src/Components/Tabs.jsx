@@ -8,7 +8,7 @@ import StyledButton from "./StyledButton";
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
 
 const Tabs = () => {
-    const [index, setIndex] = useState(40)
+    const [index, setIndex] = useState(0)
     const [ComponentType, setComponentType] = useState(null)
 
     const DATA = [
@@ -71,11 +71,9 @@ const Tabs = () => {
     }, [ComponentType])
 
     useEffect(() => {
-
         const getID = (e) => {
             const id = e.target.id
             return id ? setComponentType(state => id) : null
-            // return setComponentType(state => id)
         }
 
         window.addEventListener("click", getID)
@@ -83,6 +81,10 @@ const Tabs = () => {
         return () => window.removeEventListener("click", getID)
 
     }, [])
+
+    useEffect(() => {
+        console.log(index)
+    }, [index])
 
     let MyComponent;
 
@@ -97,28 +99,27 @@ const Tabs = () => {
 
     return (
         <>
-            <section className="fixed border-2 border-white overflow-x-hidden w-fit mt-5">
+            <section className="fixed border-2 border-white overflow-x-hidden w-70 mt-5">
                 <div className={`flex gap-5 overflow-visible transition-all -translate-x-${index}`}>
 
                     <ListItem
-                        ulClass={"flex flex-col py-1 gap-10 text-lg hidden lg:flex gap-10 bg-gray-800"}
+                        ulClass={"flex flex-col py-1 text-lg hidden lg:flex gap-10 bg-gray-800"}
                         liClass="flex"
                         data={DATA} />
 
-                    <h1 onClick={() => goBack()}>
-                        Back</h1>
+                    {/* <h1 onClick={() => goBack()}>
+                        Back</h1> */}
+
+                    <StyledButton clickFunction={() => goBack()}>
+                        Back
+                    </StyledButton>
 
                     {MyComponent ? <MyComponent /> : null}
                 </div>
 
             </section>
 
-            <StyledButton clickFunction={() => handleClick()}>
-                BTN
-            </StyledButton>
-            <h1>
-                {ComponentType}
-            </h1>
+
         </>
     );
 }

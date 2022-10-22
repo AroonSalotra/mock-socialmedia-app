@@ -9,7 +9,8 @@ const DebugComponent = (props) => {
 
 
     return (
-        <div className="text-center text-4xl">
+        <div className="text-center text-4xl"
+            id="debug" >
             <h1>
                 {text}
             </h1>
