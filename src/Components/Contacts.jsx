@@ -6,7 +6,7 @@ const Contacts = (props) => {
     const [display, setDisplay] = useState("hidden")
     const { users } = props;
 
-    const userFilter = users.slice(0)
+    const userFilter = users.slice(0, 6)
 
     const handleClick = () => {
         display === "hidden" ?

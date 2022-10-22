@@ -1,7 +1,7 @@
 const ListItem = (props) => {
     const { data, ulClass, liClass, iconClass, useID, clickEffect } = props;
 
-    const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md border-2 border-white "
+    const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md"
 
 
     const verifyLiClass = liClass ? liClass : ""

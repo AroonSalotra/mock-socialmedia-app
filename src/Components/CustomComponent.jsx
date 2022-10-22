@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
-import MarketDisplay from "./MarketDisplay";
 import Friends from "./SidebarComponents,/Friends";
 import Market from "./SidebarComponents,/Market";
 
-const DebugComponent = (props) => {
+const CustomComponent = (props) => {
 
-    const { MyComponent } = props;
+    const { setComponent } = props;
 
-    console.log(MyComponent)
+    console.log(setComponent)
 
     let CustomComponent;
 
-    switch (MyComponent) {
+    switch (setComponent) {
         case "Friends":
             CustomComponent = Friends
             break;
@@ -21,16 +19,11 @@ const DebugComponent = (props) => {
         default:
             return undefined
     }
-
-    // let Custom;
-    // Custom = MarketDisplay
-
     return (
-        <div>
-            {/* <MyComponent /> */}
+        <>
             <CustomComponent />
-        </div>
+        </>
     );
 }
 
-export default DebugComponent;
+export default CustomComponent;

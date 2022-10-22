@@ -2,8 +2,11 @@ import ListItem from "./ListItem";
 import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import Friends from "./SidebarComponents,/Friends";
+import Market from "./SidebarComponents,/Market";
 import Post from "./Post";
 import StyledButton from "./StyledButton";
+import MarketDisplay from "./MarketDisplay";
+import CustomComponent from "./CustomComponent";
 
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
 
@@ -20,7 +23,11 @@ const Tabs = () => {
             text: "Groups", icon: <FcAdvertising />,
             clickEffect: (e) => handleClick(e)
         },
-        // { text: "Marketplace", icon: <FcBusiness /> },
+        {
+            text: "Market", icon: <FcBusiness />,
+            clickEffect: (e) => handleClick(e)
+        },
+
         {
             text: "Watch", icon: <FcBinoculars />,
             clickEffect: (e) => handleClick(e)
@@ -86,24 +93,27 @@ const Tabs = () => {
         console.log(index)
     }, [index])
 
-    let MyComponent;
+    // let MyComponent;
 
-    switch (ComponentType) {
-        case "Friends":
-            MyComponent = Friends
-            break;
-        default:
-            MyComponent = null
-    }
-
+    // switch (ComponentType) {
+    //     case "Friends":
+    //         MyComponent = Friends
+    //         break;
+    //     case "Market":
+    //         MyComponent = MarketDisplay
+    //         break;
+    //     default:
+    //         MyComponent = null
+    // }
 
     return (
         <>
-            <section className="fixed border-2 border-white overflow-x-hidden w-70 mt-5">
-                <div className={`flex gap-5 overflow-visible transition-all -translate-x-${index}`}>
+            <section className="fixed overflow-hidden w- mt-40 border-2 border-white">
+
+                <div className={`-translate-x-${index} flex overflow-visible transition-all `}>
 
                     <ListItem
-                        ulClass={"flex flex-col py-1 text-lg hidden lg:flex gap-10 bg-gray-800"}
+                        ulClass={"flex gap-y-5 flex-col py-1 text-lg hidden lg:flex bg-gray-800"}
                         liClass="flex"
                         data={DATA} />
 
@@ -114,7 +124,13 @@ const Tabs = () => {
                         Back
                     </StyledButton>
 
-                    {MyComponent ? <MyComponent /> : null}
+                    {/* {MyComponent ? <MyComponent /> : null} */}
+
+                    <CustomComponent
+                        setComponent={ComponentType}
+                    />
+
+
                 </div>
 
             </section>

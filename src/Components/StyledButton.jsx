@@ -11,7 +11,7 @@ const StyledButton = (props) => {
 
     return (
         <>
-            <button className="w-fit bg-gray-900 py-1 px-4 font-semibold rounded-md hover:bg-slate-400 active:scale-95"
+            <button className="w-fit bg-gray-900 py-1 px-4 font-semibold rounded-md hover:bg-slate-400 active:scale-105"
                 onClick={clickFunction ? clickFunction : null}>
                 {children}
             </button>

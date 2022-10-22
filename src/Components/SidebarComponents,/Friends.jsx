@@ -11,6 +11,7 @@ const Friends = () => {
                 return <UserDisplay
                     userName={userName}
                     userImg={userImg}
+                    userClass=""
                 />
             })}
         </div>

@@ -8,12 +8,16 @@ import MarketDisplay from './components/MarketDisplay';
 import Gaming from './components/Gaming';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Debug from './components/Debug';
+import { useState } from 'react';
 
 function App() {
+  const [marketCart, setMarketCart] = useState([])
   return (
     <BrowserRouter>
       <div className="text-white bg-gray-800">
         <Navbar />
+
+        <Tabs />
         <div className='py-5 lg:py-24'>
 
           <Routes>
@@ -21,7 +25,6 @@ function App() {
             <Route path='/mock-socialmedia-app/home'
               element={<>
                 <Contacts users={USERS} />
-                <Tabs />
                 <PostItem users={USERS} posts={POSTS} />
               </>}>
             </Route>
@@ -29,7 +32,9 @@ function App() {
             <Route path='/mock-socialmedia-app/marketplace'
               element={
                 <>
-                  <MarketDisplay users={USERS} />
+                  <MarketDisplay users={USERS}
+                    marketCart={marketCart}
+                    setMarketCart={setMarketCart} />
                 </>} >
             </Route>
 
