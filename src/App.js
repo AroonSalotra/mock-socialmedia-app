@@ -17,7 +17,9 @@ function App() {
       <div className="text-white bg-gray-800">
         <Navbar />
 
-        <Tabs />
+        <Tabs
+          marketCart={marketCart}
+        />
         <div className='py-5 lg:py-24'>
 
           <Routes>

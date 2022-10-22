@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const MarketItem = (props) => {
     const [inCart, setInCart] = useState(false)
-    const { itemID, marketCart, setMarketCart } = props;
+    const { itemID, marketCart, setMarketCart, showBtn } = props;
 
     const getItem = MARKET[itemID]
     const { itemImg, price, item } = getItem
@@ -41,13 +41,15 @@ const MarketItem = (props) => {
         <div>
             <p>{item}</p>
             <img className="w-40 h-40 object-cover"
-            src={itemImg}
+                src={itemImg}
                 alt="" />
 
-            <StyledButton
-                clickFunction={() => handleClick()}>
-                ADD
-            </StyledButton>
+            {showBtn ?
+                <StyledButton
+                    clickFunction={() => handleClick()}>
+                    ADD
+                </StyledButton>
+                : null}
 
             <p>
                 {price}

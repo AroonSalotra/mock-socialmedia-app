@@ -10,9 +10,11 @@ import CustomComponent from "./CustomComponent";
 
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
 
-const Tabs = () => {
+const Tabs = (props) => {
     const [index, setIndex] = useState(0)
     const [ComponentType, setComponentType] = useState(null)
+
+    const { marketCart } = props;
 
     const DATA = [
         {
@@ -93,49 +95,28 @@ const Tabs = () => {
         console.log(index)
     }, [index])
 
-    // let MyComponent;
-
-    // switch (ComponentType) {
-    //     case "Friends":
-    //         MyComponent = Friends
-    //         break;
-    //     case "Market":
-    //         MyComponent = MarketDisplay
-    //         break;
-    //     default:
-    //         MyComponent = null
-    // }
-
     return (
         <>
             <section className="fixed overflow-hidden w- mt-40 border-2 border-white">
 
-                <div className={`-translate-x-${index} flex overflow-visible transition-all `}>
+                <div className={`-translate-x-${index} flex overflow-visible transition-all`}>
 
                     <ListItem
                         ulClass={"flex gap-y-5 flex-col py-1 text-lg hidden lg:flex bg-gray-800"}
                         liClass="flex"
                         data={DATA} />
 
-                    {/* <h1 onClick={() => goBack()}>
-                        Back</h1> */}
-
                     <StyledButton clickFunction={() => goBack()}>
                         Back
                     </StyledButton>
 
-                    {/* {MyComponent ? <MyComponent /> : null} */}
 
                     <CustomComponent
-                        setComponent={ComponentType}
-                    />
-
+                        setComponent={ComponentType} />
 
                 </div>
 
             </section>
-
-
         </>
     );
 }

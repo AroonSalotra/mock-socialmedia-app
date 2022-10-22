@@ -24,6 +24,7 @@ const MarketDisplay = (props) => {
                             itemID={itemID}
                             marketCart={marketCart}
                             setMarketCart={setMarketCart}
+                            showBtn={true}
                         />
                     </>
                 })}

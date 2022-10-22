@@ -1,9 +1,13 @@
 import Friends from "./SidebarComponents,/Friends";
 import Market from "./SidebarComponents,/Market";
+import MarketDisplay from "./MarketDisplay";
+
+import { useState } from "react";
 
 const CustomComponent = (props) => {
+    const [customProps, setCustomProps] = useState(false)
 
-    const { setComponent } = props;
+    const { setComponent  } = props;
 
     console.log(setComponent)
 
@@ -21,7 +25,9 @@ const CustomComponent = (props) => {
     }
     return (
         <>
-            <CustomComponent />
+            <CustomComponent   />
+
+            {/* {customProps ? <CustomComponent  /> : null} */}
         </>
     );
 }
