@@ -11,8 +11,7 @@ const Market = () => {
             {MARKET.map(({ itemID }) => {
                 return <>
                     <MarketItem
-                        itemID={itemID}
-                    />
+                        itemID={itemID} />
                 </>
             })}
         </div>

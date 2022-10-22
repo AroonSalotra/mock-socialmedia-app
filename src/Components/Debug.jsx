@@ -4,11 +4,7 @@ import { useEffect, useRef } from "react";
 const Debug = () => {
     return (
         <>
-            <div>
-                <DebugComponent
-                    MyComponent={"Market"}
-                 />
-            </div>
+            <DebugComponent />
         </>
 
     );

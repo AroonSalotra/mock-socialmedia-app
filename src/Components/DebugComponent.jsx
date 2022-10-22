@@ -2,33 +2,25 @@ import { Link } from "react-router-dom";
 import MarketDisplay from "./MarketDisplay";
 import Friends from "./SidebarComponents,/Friends";
 import Market from "./SidebarComponents,/Market";
+import useGetApi from "../hooks/useGetApi";
+import LocalAPi from "../data/API-Local"
 
 const DebugComponent = (props) => {
 
-    const { MyComponent } = props;
+    // const KEY = "access_key = 196fc42e501a19add963f044bc4d20d0"
+    // const PARAMS = "&languages=en"
 
-    console.log(MyComponent)
+    // const { data } = useGetApi("http://api.mediastack.com/v1/news?access_key=196fc42e501a19add963f044bc4d20d0&languages=en&countries=gb")
 
-    let CustomComponent;
+    
+    const data = LocalAPi
+    console.log(data)
 
-    switch (MyComponent) {
-        case "Friends":
-            CustomComponent = Friends
-            break;
-        case "Market":
-            CustomComponent = Market
-            break;
-        default:
-            return undefined
-    }
 
-    // let Custom;
-    // Custom = MarketDisplay
 
     return (
         <div>
-            {/* <MyComponent /> */}
-            <CustomComponent />
+
         </div>
     );
 }
