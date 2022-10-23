@@ -1,22 +1,28 @@
 import LocalData from "../data/API-Local.json"
 import Post from "./Post";
 
-const News = () => {
-
+const News = (props) => {
+    const { imgClass, customClass } = props;
     const data = LocalData
-    console.log(data)
+    // console.log(data)
 
     return (
-        <>
-            {data.map(({ author, title, description, url, source, image, published_at }) => {
+        <section className="flex flex-col">
+            {data.map(({ author, title, description, url,
+                source, image, published_at }) => {
                 return <Post
                     postText={title}
                     postImg={image}
                     postDate={published_at}
-                    userName={`from ${source} by ${author}`}
+                    // userName={`from ${source} by ${author}`}
+                    userName={author ? `from ${source} by ${author}`
+                        : `from ${source}`}
+                    userImg={image}
+                    imgClass={imgClass}
+                    customClass={customClass}
                 />
             })}
-        </>
+        </section>
     );
 }
 

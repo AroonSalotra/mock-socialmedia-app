@@ -4,7 +4,8 @@ import ListItem from "./ListItem";
 
 const Post = (props) => {
     const { userName, postDate, userImg, postImg, imgClass,
-        postText, postLink, customClass, postType, item, price, lineBreak } = props
+        postText, postLink, customClass, postType, item, price,
+        lineBreak, showComments } = props
 
     const checkClass = customClass ? customClass : "flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full lg:w-50rem mt-4"
 
@@ -22,14 +23,14 @@ const Post = (props) => {
                 </div>
 
                 <p
-                // className="text-xl p-4 w-full lg:pl-12"
+                    className="pt-2"
                 >
                     {postText}
                 </p>
 
                 {postImg ?
                     <img
-                        className={imgClass}
+                        className={`${imgClass} py-4`}
                         src={postImg}
                         alt={`${postImg}'s post on ${postDate}`} />
                     :
@@ -52,9 +53,8 @@ const Post = (props) => {
                         <li>{item}</li>
                         <li>£{price}</li>
                     </ul>
-                    :
-                    <Comment
-                        userImg={userImg} />}
+                    : showComments ?
+                        <Comment userImg={userImg} /> : null}
 
             </div>
         </>
