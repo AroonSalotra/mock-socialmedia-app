@@ -29,33 +29,12 @@ const Tabs = (props) => {
             text: "Market", icon: <FcBusiness />,
             clickEffect: (e) => handleClick(e)
         },
-
-        // {
-        //     text: "Watch", icon: <FcBinoculars />,
-        //     clickEffect: (e) => handleClick(e)
-        // },
-        // {
-        //     text: "Memories", icon: <FcNfcSign />,
-        //     clickEffect: () => handleClick()
-        // },
-        // {
-        //     text: "Saved", icon: <FcPlus />,
-        //     clickEffect: (e) => handleClick(e)
-        // },
-        // {
-        //     text: "Pages", icon: <FcNook />,
-        //     clickEffect: (e) => handleClick(e)
-        // },
         {
             text: "News", icon: <FcHighPriority />,
             clickEffect: (e) => handleClick(e)
         },
         {
             text: "Events", icon: <FcAlarmClock />,
-            clickEffect: (e) => handleClick(e)
-        },
-        {
-            text: "Most Recent", icon: <FcRatings />,
             clickEffect: (e) => handleClick(e)
         }
     ]

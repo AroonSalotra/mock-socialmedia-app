@@ -22,18 +22,20 @@ const Events = () => {
     ]
 
     return (
-        <div className="text-center pl-4">
+        <div className="text-center flex flex-col gap-5">
             {data.map(({ date, userId, text }) => {
-                return <div key={date}>
+                return <div className="p-4 shadow-md shadow-gray-700"
+                    key={date}>
 
-                    <p>On: {date}</p>
 
                     <UserDisplay
                         userId={userId}
                         showName={true} />
 
-                    <p>{text}</p>
-                    <p>Are you attending?</p>
+                    <ul className="border-y-4 border-gray-900 py-4">
+                        <li className="font-semibold">{text}</li>
+                        <li className="text-lg">{date}</li>
+                    </ul>
 
                     <SelectButtons />
 
