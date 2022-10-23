@@ -16,7 +16,9 @@ const CustomComponent = (props) => {
             <div className="bg-gray-800 h-112 overflow-auto">
 
                 {setComponent === "Friends" ? <Friends /> :
-                    setComponent === "Market" ? <Market /> :
+                    setComponent === "Market" ? <MarketDisplay
+                        customClass={"flex-col"}
+                    /> :
                         setComponent === "News" ? <News
                             imgClass={"w-full h-40"}
                             customClass={"w-72"}

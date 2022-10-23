@@ -30,12 +30,6 @@ const MarketItem = (props) => {
     }
 
     // console.log(MARKET[itemID])
-    console.log(marketCart)
-
-
-
-    // get item by ID
-
 
     return (
         <div>

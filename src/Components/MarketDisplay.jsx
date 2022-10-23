@@ -4,12 +4,13 @@ import MarketItem from "./MarketItem";
 import Post from "./Post";
 
 const MarketDisplay = (props) => {
-    const { users, marketCart, setMarketCart } = props
+    const { users, marketCart, setMarketCart, customClass } = props
 
     return (
-        <section className="">
+        <section>
             <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>
-            <div className="flex justify-center gap-20 flex-wrap">
+            <div className={customClass ? customClass :
+                "flex justify-center gap-20 flex-wrap"}>
                 {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
                     return <MarketItem
                         item={item}

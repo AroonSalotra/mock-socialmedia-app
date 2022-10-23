@@ -4,7 +4,7 @@ const ListLinkTo = (props) => {
 
     const { data, ulClass, liClass, iconClass } = props;
 
-    const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md"
+    const hoverClass = "hover:bg-gray-700  cursor-pointer rounded-full p-4 active:scale-95"
 
 
     const verifyLiClass = liClass ? liClass : ""

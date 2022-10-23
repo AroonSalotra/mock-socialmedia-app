@@ -7,7 +7,18 @@ module.exports = {
     extend: {
       spacing: {
         "50rem": "50rem",
-        "112" : "28rem"
+        "112": "28rem"
+      },
+      animation: {
+        "pulse-once": "pulse linear 800ms",
+        "bounce-once": "bounce linear 200ms",
+        "fade-in": "fade-in linear 400ms"
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0.4" },
+          "100%": { opacity: "1" }
+        }
       }
     },
     screens: {

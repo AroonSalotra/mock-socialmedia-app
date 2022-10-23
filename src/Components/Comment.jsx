@@ -36,9 +36,12 @@ const Comment = (props) => {
 
     return (
         <>
+            <div className="h-0.5 w-full bg-slate-300" />
+
             <ListItem
-                ulClass={"flex justify-around w-full"}
+                ulClass={"flex justify-around w-full py-4"}
                 data={postInteraction} />
+
 
             <ViewComments
                 classList={showInput} >
@@ -54,7 +57,7 @@ const Comment = (props) => {
                     onSubmit={(e) => e.preventDefault(e)}>
 
                     <input
-                        className="text-white font-semibold h-fit p-2.5 rounded-full items-baseline w-10/12 resize-none bg-gray-600 lg:w-96"
+                        className="text-white font-semibold h-fit p-2.5 rounded-full items-baseline w-10/12 resize-none bg-gray-700 lg:w-96"
                         type="text"
                         onChange={(e) => handleChange(e)}
                         value={currentComment} />
@@ -71,6 +74,7 @@ const Comment = (props) => {
 
             </div>
         </>
+
     );
 }
 

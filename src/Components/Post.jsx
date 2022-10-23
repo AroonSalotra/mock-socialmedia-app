@@ -7,7 +7,7 @@ const Post = (props) => {
         postText, postLink, customClass, postType, item, price,
         lineBreak, showComments } = props
 
-    const checkClass = customClass ? customClass : "flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full lg:w-50rem mt-4"
+    const checkClass = customClass ? customClass : "flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full transition-all animate-fade-in lg:w-50rem mt-4"
 
     return (
         <>
@@ -23,21 +23,23 @@ const Post = (props) => {
                 </div>
 
                 <p
-                    className="pt-2"
+                    className="py-4"
                 >
                     {postText}
                 </p>
 
                 {postImg ?
                     <img
-                        className={`${imgClass} py-4`}
+                        className={`${imgClass}`}
                         src={postImg}
                         alt={`${postImg}'s post on ${postDate}`} />
                     :
                     null}
 
                 {postLink ?
-                    <a href={postLink} target="_blank" rel="noreferrer">
+                    <a href={postLink}
+                        target="_blank"
+                        rel="noreferrer" >
                         Link
                     </a>
                     :

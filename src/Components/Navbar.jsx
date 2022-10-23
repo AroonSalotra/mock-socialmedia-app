@@ -1,8 +1,5 @@
-import SearchBar from "./SearchBar";
-import { AiFillMessage, AiFillCustomerService, AiFillNotification } from "react-icons/ai"
+import { AiFillMessage, AiFillCustomerService, AiFillNotification, AiFillHome, AiFillHdd } from "react-icons/ai"
 import { GiHamburgerMenu } from "react-icons/gi"
-import Status from './Status';
-import { Link } from "react-router-dom";
 import ListLinkTo from "./ListLinkTo";
 import ListItem from "./ListItem";
 import { useState } from "react";
@@ -19,11 +16,11 @@ const Navbar = () => {
 
     const navbarContent = {
         listA: [
-            { text: "Home", linkTo: "home" },
+            { text: <AiFillHome />, linkTo: "home" },
             // { text: "Watch" },
-            { text: "Marketplace", linkTo: "marketplace" },
-            { text: "Gaming", linkTo: "gaming" },
-            { text: "News", linkTo: "news" },
+            { text: <AiFillNotification />, linkTo: "marketplace" },
+            // { text: "Gaming", linkTo: "gaming" },
+            { text: <AiFillHdd />, linkTo: "news" },
             { text: "Debug", linkTo: "debug" },
         ],
         listB: [
@@ -46,16 +43,16 @@ const Navbar = () => {
                 </button>
 
                 <ListLinkTo
-                    ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center justify-between`}
+                    ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center`}
                     data={navbarContent.listA}>
                 </ListLinkTo>
 
                 {/* <Status /> */}
 
-                <ListItem
+                {/* <ListItem
                     ulClass={"hidden flex-row w-full justify-end gap-10 px-4 lg:flex justify-end gap-10"}
                     data={navbarContent.listB}>
-                </ListItem>
+                </ListItem> */}
             </div>
 
         </nav>
