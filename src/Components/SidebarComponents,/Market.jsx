@@ -1,17 +1,26 @@
 import MARKET from "../../data/MARKET.json"
 import MarketItem from "../MarketItem";
 import { Link } from "react-router-dom";
+import StyledButton from "../StyledButton";
 
-const Market = () => {
+const Market = (props) => {
+    const { marketCart } = props;
+
+    // console.log(marketCart)
     return (
-        <div className="flex flex-col pl-10">
+        <div className="flex flex-col p-5">
             <Link to={"/mock-socialmedia-app/marketplace"}>
-                Go to Marketplace
+                <StyledButton>
+                    Go to Marketplace
+                </StyledButton>
             </Link>
-            {MARKET.map(({ itemID }) => {
+            <p className="text-sm text-slate-400 font-semibold italic w-40">
+                Your wishlisted items will appear here</p>
+
+            {marketCart.map(({ id }) => {
                 return <>
                     <MarketItem
-                        itemID={itemID} />
+                        itemID={id} />
                 </>
             })}
         </div>

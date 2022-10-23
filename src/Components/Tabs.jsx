@@ -91,7 +91,8 @@ const Tabs = (props) => {
 
 
                     <CustomComponent
-                        setComponent={ComponentType} />
+                        setComponent={ComponentType}
+                        marketCart={marketCart} />
 
                 </div>
 

@@ -9,7 +9,9 @@ import { useState } from "react";
 const CustomComponent = (props) => {
     const [customProps, setCustomProps] = useState(false)
 
-    const { setComponent } = props;
+    const { setComponent, marketCart } = props;
+
+    console.log(marketCart)
 
     return (
         <>
@@ -17,8 +19,9 @@ const CustomComponent = (props) => {
             <div className="bg-gray-800 h-112 overflow-auto">
 
                 {setComponent === "Friends" ? <Friends /> :
-                    setComponent === "Market" ? <MarketDisplay
+                    setComponent === "Market" ? <Market
                         customClass={"flex-col"}
+                        marketCart={marketCart}
                     /> :
                         setComponent === "News" ? <News
                             imgClass={"w-full h-40"}

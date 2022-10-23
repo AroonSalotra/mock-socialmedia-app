@@ -1,4 +1,5 @@
 import { GrCheckmark, GrClose } from "react-icons/gr"
+import { AiOutlineClose, AiOutlineCheck } from "react-icons/ai"
 import { useState } from "react"
 
 const SelectButtons = () => {
@@ -17,14 +18,15 @@ const SelectButtons = () => {
 
     return (
         <>
-            <div className="flex justify-center text-5xl gap-5 pt-4 cursor-pointer">
+            <div className="flex justify-center text-4xl gap-5 pt-4 cursor-pointer">
 
-                <GrCheckmark
+                <AiOutlineCheck
                     onClick={() => selectIcon("check")}
-                    className={`border-4 border-lime-500 rounded-lg px-2 ${bgCheck} hover:bg-lime-300`} />
-                <GrClose
+                    className={`text-gray-200 stroke-white stroke-2 border-4 border-lime-500 rounded-lg px-2 ${bgCheck} hover:bg-lime-300`} />
+                <AiOutlineClose
                     onClick={() => selectIcon("cross")}
-                    className={`border-4 border-red-900 rounded-lg px-2 ${bgCross} hover:bg-red-500`} />
+                    className={`text-gray-200 stroke-white stroke-2 border-4 border-red-900 rounded-lg px-2 ${bgCross} hover:bg-red-500`} />
+
 
             </div>
         </>

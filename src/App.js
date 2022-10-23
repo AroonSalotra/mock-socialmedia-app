@@ -14,17 +14,16 @@ import News from './components/News';
 function App() {
   const [marketCart, setMarketCart] = useState([])
   return (
+
     <BrowserRouter>
       <div className="text-white bg-gray-800">
         <Navbar />
 
         <Tabs
-          marketCart={marketCart}
-        />
+          marketCart={marketCart} />
+
         <div className='py-5 lg:py-24'>
-
           <Routes>
-
             <Route path='/mock-socialmedia-app/home'
               element={<>
                 <Contacts users={USERS} />
@@ -60,6 +59,7 @@ function App() {
         </div>
       </div>
     </BrowserRouter>
+
   );
 }
 
