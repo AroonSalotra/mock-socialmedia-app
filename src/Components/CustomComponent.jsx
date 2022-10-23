@@ -2,6 +2,7 @@ import Friends from "./SidebarComponents,/Friends";
 import Market from "./SidebarComponents,/Market";
 import MarketDisplay from "./MarketDisplay";
 import News from "./News";
+import Events from "./SidebarComponents,/Events";
 
 import { useState } from "react";
 
@@ -23,7 +24,8 @@ const CustomComponent = (props) => {
                             imgClass={"w-full h-40"}
                             customClass={"w-72"}
                         />
-                            : null}
+                            : setComponent === "Events" ? <Events />
+                                : null}
             </div>
 
 

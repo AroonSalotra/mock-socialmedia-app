@@ -75,9 +75,9 @@ const Tabs = (props) => {
         return resetIndex & resetComponentType
     }
 
-    useEffect(() => {
-        console.log(ComponentType)
-    }, [ComponentType])
+    // useEffect(() => {
+    //     console.log(ComponentType)
+    // }, [ComponentType])
 
     useEffect(() => {
         const getID = (e) => {
@@ -91,9 +91,9 @@ const Tabs = (props) => {
 
     }, [])
 
-    useEffect(() => {
-        console.log(index)
-    }, [index])
+    // useEffect(() => {
+    //     console.log(index)
+    // }, [index])
 
     return (
         <>

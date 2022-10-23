@@ -16,9 +16,9 @@ const News = (props) => {
                     postImg={image}
                     postDate={published_at}
                     // userName={`from ${source} by ${author}`}
-                    userName={author ? `from ${source} by ${author}`
+                    customName={author ? `from ${source} by ${author}`
                         : `from ${source}`}
-                    userImg={image}
+                    // userImg={image}
                     userID={2}
                     imgClass={imgClass}
                     customClass={customClass}

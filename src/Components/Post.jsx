@@ -6,11 +6,11 @@ import USERS from "../data/USERS.json"
 const Post = (props) => {
     const { postDate, postImg, imgClass,
         postText, postLink, customClass, postType, item, price,
-        lineBreak, showComments, userID, userImg, userName } = props
+        lineBreak, showComments, userId, userImg, userName, customName } = props
 
     const checkClass = customClass ? customClass : "flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full transition-all animate-fade-in lg:w-50rem mt-4"
 
-    // console.log(userID)
+    // console.log(userId)
 
     return (
         <>
@@ -18,8 +18,9 @@ const Post = (props) => {
 
                 <div className="py-2 px-8 bg-gray-800 rounded-b-lg lg:">
                     <UserDisplay
-                        userName={userName ? userName : USERS[userID].userName}
-                        userImg={userImg ? userImg : USERS[userID].userImg}
+                        userId={userId}
+                        showName={true}
+                        customName={customName ? customName : null}
                     />
 
                     <p className="text-gray-400 text-center">
@@ -61,7 +62,7 @@ const Post = (props) => {
                     </ul>
                     : showComments ?
                         <Comment userImg={userImg ?
-                            userImg : USERS[userID].userImg} /> : null}
+                            userImg : USERS[userId].userImg} /> : null}
 
             </div>
         </>

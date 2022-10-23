@@ -7,11 +7,9 @@ const Friends = () => {
             <h3 className="text-3xl font-semibold">
                 Friends</h3>
 
-            {USERS.map(({ userName, userImg }) => {
+            {USERS.map(({ userId }) => {
                 return <UserDisplay
-                    userName={userName}
-                    userImg={userImg}
-                    userClass=""
+                    userId={userId}
                 />
             })}
         </div>
