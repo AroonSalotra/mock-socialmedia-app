@@ -20,14 +20,14 @@ const MarketDisplay = (props) => {
                 })} */}
 
                 {MARKET.map(({ itemID }) => {
-                    return <>
-                        <MarketItem
-                            itemID={itemID}
-                            marketCart={marketCart}
-                            setMarketCart={setMarketCart}
-                            showBtn={true}
-                        />
-                    </>
+                    return <MarketItem
+                        key={itemID}
+                        itemID={itemID}
+                        marketCart={marketCart}
+                        setMarketCart={setMarketCart}
+                        showBtn={true}
+                    />
+
                 })}
             </div>
 

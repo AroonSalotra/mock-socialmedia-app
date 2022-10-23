@@ -16,12 +16,12 @@ const Navbar = () => {
 
     const navbarContent = {
         listA: [
-            { text: <AiFillHome />, linkTo: "home" },
+            { text: <AiFillHome />, linkTo: "home", id: "nav-home" },
             // { text: "Watch" },
-            { text: <AiFillNotification />, linkTo: "marketplace" },
+            { text: <AiFillNotification />, linkTo: "marketplace", id: "nav-mkt" },
             // { text: "Gaming", linkTo: "gaming" },
-            { text: <AiFillHdd />, linkTo: "news" },
-            { text: "Debug", linkTo: "debug" },
+            { text: <AiFillHdd />, linkTo: "news", id: "nav-nws" },
+            { text: "Debug", linkTo: "debug", id: "nav-dbg" },
         ],
         listB: [
             { icon: <AiFillMessage />, id: "icon-nav-msg" },

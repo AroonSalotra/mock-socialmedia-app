@@ -19,7 +19,7 @@ const Comment = (props) => {
     const postInteraction = [
         { text: "Like" },
         { text: "Comments", clickEffect: handleShowInput },
-        { text: "Share" },
+        { text: "Share" }
     ]
 
     const handleChange = (e) => {

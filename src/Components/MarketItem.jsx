@@ -33,6 +33,7 @@ const MarketItem = (props) => {
 
     return (
         <div>
+        
             <p>{item}</p>
             <img className="w-40 h-40 object-cover"
                 src={itemImg}
@@ -41,13 +42,14 @@ const MarketItem = (props) => {
             {showBtn ?
                 <StyledButton
                     clickFunction={() => handleClick()}>
-                    ADD
+                    {inCart ? "Remove" : "Add"}
                 </StyledButton>
                 : null}
 
             <p>
                 {price}
             </p>
+
         </div>
     );
 }

@@ -1,13 +1,16 @@
 import UserDisplay from "./UserDisplay";
 import Comment from "./Comment";
 import ListItem from "./ListItem";
+import USERS from "../data/USERS.json"
 
 const Post = (props) => {
-    const { userName, postDate, userImg, postImg, imgClass,
+    const { postDate, postImg, imgClass,
         postText, postLink, customClass, postType, item, price,
-        lineBreak, showComments } = props
+        lineBreak, showComments, userID, userImg, userName } = props
 
     const checkClass = customClass ? customClass : "flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full transition-all animate-fade-in lg:w-50rem mt-4"
+
+    // console.log(userID)
 
     return (
         <>
@@ -15,8 +18,9 @@ const Post = (props) => {
 
                 <div className="py-2 px-8 bg-gray-800 rounded-b-lg lg:">
                     <UserDisplay
-                        userName={userName}
-                        userImg={userImg} />
+                        userName={userName ? userName : USERS[userID].userName}
+                        userImg={userImg ? userImg : USERS[userID].userImg}
+                    />
 
                     <p className="text-gray-400 text-center">
                         {`Posted on ${postDate}`}</p>
@@ -56,7 +60,8 @@ const Post = (props) => {
                         <li>£{price}</li>
                     </ul>
                     : showComments ?
-                        <Comment userImg={userImg} /> : null}
+                        <Comment userImg={userImg ?
+                            userImg : USERS[userID].userImg} /> : null}
 
             </div>
         </>

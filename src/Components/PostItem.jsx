@@ -15,6 +15,7 @@ const ListPost = (props) => {
                     postImg={postImg}
                     postText={postText}
                     postLink={postLink}
+                    userID={posterID}
                     key={postDate + posterID + postText}
                     showComments={true}
                     imgClass="w-full h-auto"
