@@ -6,6 +6,12 @@ import Post from "./Post";
 const MarketDisplay = (props) => {
     const { users, marketCart, setMarketCart, customClass } = props
 
+    // useEffect(() => {
+    //     const getCart = window.localStorage.getItem("CART")
+    //     setMarketCart(current => JSON.parse(getCart))
+    // }, [])
+
+
     return (
         <section>
             <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>

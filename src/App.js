@@ -8,11 +8,19 @@ import MarketDisplay from './components/MarketDisplay';
 import Gaming from './components/Gaming';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Debug from './components/Debug';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import News from './components/News';
 
 function App() {
   const [marketCart, setMarketCart] = useState([])
+
+  // useEffect(() => {
+  //   window.localStorage.setItem("CART", JSON.stringify(marketCart))
+  //   console.log(marketCart)
+  // }, [marketCart])
+
+  // console.log(marketCart)
+
   return (
 
     <BrowserRouter>

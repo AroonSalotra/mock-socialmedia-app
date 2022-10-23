@@ -8,7 +8,7 @@ const UserDisplay = (props) => {
 
     const checkHover = hoverEffect ? "cursor-pointer hover:bg-gray-700" : ""
 
-    console.log(`this ID is ${userId}`)
+    // console.log(`this ID is ${userId}`)
 
     return (
         <div className={`flex w-fit m-auto rounded-t-lg items-center ${userClass}`}>

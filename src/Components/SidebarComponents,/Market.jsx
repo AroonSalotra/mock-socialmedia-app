@@ -6,7 +6,8 @@ import StyledButton from "../StyledButton";
 const Market = (props) => {
     const { marketCart } = props;
 
-    // console.log(marketCart)
+    console.log("state", marketCart)
+
     return (
         <div className="flex flex-col p-5">
             <Link to={"/mock-socialmedia-app/marketplace"}>

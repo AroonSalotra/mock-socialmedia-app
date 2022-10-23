@@ -11,7 +11,7 @@ const CustomComponent = (props) => {
 
     const { setComponent, marketCart } = props;
 
-    console.log(marketCart)
+    // console.log(marketCart)
 
     return (
         <>

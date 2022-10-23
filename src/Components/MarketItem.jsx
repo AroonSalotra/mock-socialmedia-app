@@ -1,6 +1,6 @@
 import StyledButton from "./StyledButton";
 import MARKET from "../data/MARKET.json"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MarketItem = (props) => {
     const [inCart, setInCart] = useState(false)
@@ -9,11 +9,19 @@ const MarketItem = (props) => {
     const getItem = MARKET[itemID]
     const { itemImg, price, item } = getItem
 
-    console.log(itemID)
+    // Load cart state
+    useEffect(() => {
+        const getCart = window.localStorage.getItem(`inCart ${item}`)
+        if (getCart !== JSON.stringify(inCart)) setInCart(oldCart => JSON.parse(getCart))
+    }, [])
+
+    // Save cart state
+    useEffect(() => {
+        const setCart = window.localStorage.setItem(`inCart ${item}`, JSON.stringify(inCart))
+        return setCart
+    }, [inCart])
 
     const handleClick = () => {
-        // console.log("this item's ID is", itemID)
-
         if (inCart) {
             let cartClone = [...marketCart]
             const matchItem = cartClone.findIndex(elem => {
@@ -29,11 +37,9 @@ const MarketItem = (props) => {
         }
     }
 
-    // console.log(MARKET[itemID])
-
     return (
         <div>
-        
+
             <p>{item}</p>
             <img className="w-40 h-40 object-cover"
                 src={itemImg}
