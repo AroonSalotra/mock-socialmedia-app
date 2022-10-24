@@ -2,11 +2,17 @@ import MARKET from "../../data/MARKET.json"
 import MarketItem from "../MarketItem";
 import { Link } from "react-router-dom";
 import StyledButton from "../StyledButton";
+import { useEffect } from "react";
+import { GiConsoleController } from "react-icons/gi";
 
 const Market = (props) => {
     const { marketCart } = props;
 
-    console.log("state", marketCart)
+    // console.log("state", marketCart)
+
+    // useEffect(() => {
+    //     console.log("market:", marketCart)
+    // }, [marketCart])
 
     return (
         <div className="flex flex-col p-5">
@@ -19,10 +25,10 @@ const Market = (props) => {
                 Your wishlisted items will appear here</p>
 
             {marketCart.map(({ id }) => {
-                return <>
+                return <div key={id}>
                     <MarketItem
                         itemID={id} />
-                </>
+                </div>
             })}
         </div>
 

@@ -71,8 +71,8 @@ const Tabs = (props) => {
     }, [])
 
     // useEffect(() => {
-    //     console.log(index)
-    // }, [index])
+    //     console.log("page load")
+    // }, [])
 
     return (
         <>

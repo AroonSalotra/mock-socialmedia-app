@@ -38,8 +38,7 @@ const MarketItem = (props) => {
     }
 
     return (
-        <div>
-
+        <div key={itemID}>
             <p>{item}</p>
             <img className="w-40 h-40 object-cover"
                 src={itemImg}
@@ -55,7 +54,6 @@ const MarketItem = (props) => {
             <p>
                 {price}
             </p>
-
         </div>
     );
 }

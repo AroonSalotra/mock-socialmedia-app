@@ -14,12 +14,18 @@ import News from './components/News';
 function App() {
   const [marketCart, setMarketCart] = useState([])
 
-  // useEffect(() => {
-  //   window.localStorage.setItem("CART", JSON.stringify(marketCart))
-  //   console.log(marketCart)
-  // }, [marketCart])
+  useEffect(() => {
+    const getItem = window.localStorage.getItem("CART")
+    const target = JSON.parse(getItem)
+    if (target !== null && target.length > 0) setMarketCart(cart => JSON.parse(getItem))
+  }, [])
 
-  // console.log(marketCart)
+
+  useEffect(() => {
+    const setItem = window.localStorage.setItem("CART", JSON.stringify(marketCart))
+
+    return setItem
+  }, [marketCart])
 
   return (
 
