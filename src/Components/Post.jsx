@@ -19,6 +19,7 @@ const Post = (props) => {
                 <div className="py-2 px-8 bg-gray-800 rounded-b-lg lg:">
                     <UserDisplay
                         userId={userId}
+                        userImg={userImg}
                         showName={true}
                         customName={customName ? customName : null}
                     />

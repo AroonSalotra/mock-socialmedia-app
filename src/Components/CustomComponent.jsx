@@ -24,6 +24,7 @@ const CustomComponent = (props) => {
                         marketCart={marketCart}
                     /> :
                         setComponent === "News" ? <News
+                            showLink={true}
                             imgClass={"w-full h-40"}
                             customClass={"w-72"}
                         />

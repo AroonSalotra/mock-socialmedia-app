@@ -2,7 +2,7 @@ import USERS from "../data/USERS.json"
 
 const UserDisplay = (props) => {
     const { showName, userClass, showStatus,
-        hoverEffect, userId, customName } = props
+        hoverEffect, userId, customName, clickFunc } = props
 
     const placeholderImg = "https://st4.depositphotos.com/11634452/41441/v/600/depositphotos_414416674-stock-illustration-picture-profile-icon-male-icon.jpg"
 

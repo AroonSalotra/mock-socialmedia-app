@@ -65,9 +65,6 @@ const Comment = (props) => {
                     <button
                         onClick={() => handleClick()}
                         type="submit">
-                        {/* <span className="text-4xl hidden md:block">
-                            <BsArrowBarUp />
-                        </span> */}
                     </button>
 
                 </form>

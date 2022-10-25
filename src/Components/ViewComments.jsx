@@ -12,9 +12,9 @@ const ViewComments = (props) => {
                 return <div
                     key={comment.length + props.children.length}
                     className="flex items-center gap-5 bg-gray-700 p-2 px-8 rounded-lg">
-                    <span>
+                    {/* <span>
                         <UserDisplay />
-                    </span>
+                    </span> */}
                     <p>
                         {comment}
                     </p>

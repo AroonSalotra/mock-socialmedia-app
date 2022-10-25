@@ -76,7 +76,7 @@ const Tabs = (props) => {
 
     return (
         <>
-            <section className="fixed overflow-hidden w- mt-40">
+            <section className="fixed overflow-hidden w- mt-40 z-10">
 
                 <div className={`-translate-x-${index} flex overflow-visible transition-all`}>
 

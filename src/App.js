@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Debug from './components/Debug';
 import { useEffect, useState } from 'react';
 import News from './components/News';
+import ViewChats from './components/ViewChats';
 
 function App() {
   const [marketCart, setMarketCart] = useState([])
@@ -36,11 +37,15 @@ function App() {
         <Tabs
           marketCart={marketCart} />
 
+        <Contacts users={USERS} />
+
+        <ViewChats />
+
+
         <div className='py-5 lg:py-24'>
           <Routes>
             <Route path='/mock-socialmedia-app/home'
               element={<>
-                <Contacts users={USERS} />
                 <PostItem users={USERS} posts={POSTS} />
               </>}>
             </Route>

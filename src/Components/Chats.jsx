@@ -3,7 +3,7 @@ import UserDisplay from "./UserDisplay";
 import InputText from "./InputText";
 import USERS from "../data/USERS.json"
 
-const DebugComponent = (props) => {
+const Chats = (props) => {
 
     const { userId } = props;
 
@@ -55,4 +55,4 @@ const DebugComponent = (props) => {
     );
 }
 
-export default DebugComponent;
+export default Chats;
