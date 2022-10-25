@@ -1,21 +1,25 @@
 import Post from "./Post";
+import POSTS from "../data/POSTS.json"
+import USERS from "../data/USERS.json"
 
-const ListPost = (props) => {
+const ListPost = () => {
 
-    const { users, posts } = props;
+    // const { users, posts } = props;
 
 
     return (
         <section className="flex flex-col gap-16">
-            {posts.map(({ postDate, postImg, postText, posterID, postLink }) => {
+            {POSTS.map(({ postDate, postImg, postText, posterID, postLink }) => {
                 return <Post
-                    userName={users[posterID].userName}
-                    userImg={users[posterID].userImg}
+                    userName={USERS[posterID].userName}
+                    userImg={USERS[posterID].userImg}
                     postDate={postDate}
                     postImg={postImg}
                     postText={postText}
                     postLink={postLink}
+                    userId={posterID}
                     key={postDate + posterID + postText}
+                    showComments={true}
                     imgClass="w-full h-auto"
                 />
             })}

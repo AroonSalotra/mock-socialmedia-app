@@ -4,13 +4,13 @@ import USERS from "../../data/USERS.json"
 const Friends = () => {
     return (
         <div>
-            <h3 className="text-3xl font-semibold">
-                Friends</h3>
+            <h3 className="text-2xl font-semibold p-5">
+                Your Friends</h3>
 
-            {USERS.map(({ userName, userImg }) => {
+            {USERS.map(({ userId }) => {
                 return <UserDisplay
-                    userName={userName}
-                    userImg={userImg}
+                    userId={userId}
+                    showName={true}
                 />
             })}
         </div>

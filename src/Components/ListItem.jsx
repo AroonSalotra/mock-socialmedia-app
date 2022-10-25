@@ -1,7 +1,7 @@
 const ListItem = (props) => {
     const { data, ulClass, liClass, iconClass, useID, clickEffect } = props;
 
-    const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md"
+    const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md px-4 py-1"
 
 
     const verifyLiClass = liClass ? liClass : ""
@@ -21,7 +21,7 @@ const ListItem = (props) => {
                     >
                         {icon ?
                             <span className={iconClass ?
-                                iconClass : "text-3xl px-4"}>
+                                iconClass : "text-3xl px-4 select-none pointer-events-none"}>
 
                                 {icon}</span> : null}
                         {text ? text : null}
@@ -34,7 +34,7 @@ const ListItem = (props) => {
                     >
                         {icon ?
                             <span className={iconClass ?
-                                iconClass : "text-3xl px-4"}>
+                                iconClass : "text-3xl px-4 select-none"}>
 
                                 {icon}</span> : null}
                         {text ? text : null}
