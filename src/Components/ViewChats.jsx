@@ -10,8 +10,8 @@ const ViewChats = () => {
         <>
             <div className="fixed bottom-0 right-10 transition-all">
 
-                <div className="">
-                    <h3 className="w-full bg-gray-600 p-2 rounded-t-md font-semibold text-center text-2xl">Chats</h3>
+                <div className="flex flex-col gap-5">
+                    {/* <h3 className="w-full bg-gray-600 p-2 rounded-t-md font-semibold text-center text-2xl">Chats</h3> */}
                     {TEMPDATA.map((elem) => {
                         return <Chats
                             userId={elem}

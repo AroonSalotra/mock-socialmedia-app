@@ -8,7 +8,7 @@ const Chats = (props) => {
     const { userId } = props;
 
     const [size, setSize] = useState({
-        width: 40,
+        width: 20,
         height: 10,
         showName: false,
         setText: "hidden"
@@ -16,34 +16,36 @@ const Chats = (props) => {
 
     const changeSize = () => {
         const sizeSmall = {
-            width: 40, height: 16,
+            width: 20, height: 10,
             showName: false, setText: "hidden"
         }
         const sizeLarge = {
-            width: 80, height: 112,
+            width: 80, height: 96,
             showName: true, setText: "block"
         }
 
-        if (size.width === 40) return setSize(state => sizeLarge)
+        if (size.width === 20) return setSize(state => sizeLarge)
         setSize(state => sizeSmall)
 
     }
 
     // console.log(USERS[userId].userName)
+    // max-h-${size.height}
     return (
         <div
-            className={`w-${size.width} max-h-${size.height} bg-slate-600 m-auto rounded-lg my-2 pb-2 transition-all`}
-        >
+            className={`w-${size.width} w-40 h-${size.height} bg-slate-600 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500 md:transition-all`}>
 
-            <span
+            {/* <span
                 className={`h-14 absolute w-60 cursor-pointer`}
                 id={`User ${USERS[userId].userName}`}
-                onClick={() => changeSize()} />
+                onClick={() => changeSize()} /> */}
 
-            <UserDisplay
-                userId={userId}
-                showName={size.showName}
-            />
+            <div className="cursor-pointer"
+                onClick={() => changeSize()}>
+                <UserDisplay
+                    userId={userId}
+                    showName={size.showName} />
+            </div>
 
             <InputText
                 setPlaceholder={"send message"}

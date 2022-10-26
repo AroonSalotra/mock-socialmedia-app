@@ -48,11 +48,7 @@ const MarketItem = (props) => {
                     userId={posterID}
                     showName={true}
                 />
-            </div>
-                : null}
-
-
-
+            </div> : null}
 
             <p className="bg-gray-700 max-w-fit font-semibold px-4">{item}</p>
             <div>
