@@ -20,6 +20,7 @@ const ListPost = () => {
                     userId={posterID}
                     key={postDate + posterID + postText}
                     showComments={true}
+                    showUser={true}
                     imgClass="w-full h-auto"
                 />
             })}

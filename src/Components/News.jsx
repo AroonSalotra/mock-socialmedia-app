@@ -9,7 +9,7 @@ const News = (props) => {
     // console.log(data)
 
     return (
-        <section className="flex flex-col p-5">
+        <section className="flex flex-col p-5 gap-14">
 
             {showLink ? <Link className="m-auto"
                 to="mock-socialmedia-app/news">
@@ -24,10 +24,11 @@ const News = (props) => {
                     key={title}
                     postText={title}
                     postImg={image}
-                    postDate={published_at}
+                    postDate={source}
                     // userName={`from ${source} by ${author}`}
-                    customName={author ? `from ${source} by ${author}`
-                        : `from ${source}`}
+                    // customName={author ? `from ${source} by ${author}`
+                    //     : `from ${source}`}
+                    // customName={`via ${source}`}
                     userImg={image}
                     // userId={2}
                     imgClass={imgClass}

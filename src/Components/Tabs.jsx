@@ -21,10 +21,10 @@ const Tabs = (props) => {
             text: "Friends", icon: <FcBusinessContact />,
             clickEffect: (e) => handleClick(e)
         },
-        {
-            text: "Groups", icon: <FcAdvertising />,
-            clickEffect: (e) => handleClick(e)
-        },
+        // {
+        //     text: "Groups", icon: <FcAdvertising />,
+        //     clickEffect: (e) => handleClick(e)
+        // },
         {
             text: "Market", icon: <FcBusiness />,
             clickEffect: (e) => handleClick(e)
@@ -76,19 +76,18 @@ const Tabs = (props) => {
 
     return (
         <>
-            <section className="fixed overflow-hidden w- mt-40 z-10">
+            <section className="fixed overflow-hidden h-full mt-40 z-10">
 
                 <div className={`-translate-x-${index} flex overflow-visible transition-all`}>
 
                     <ListItem
-                        ulClass={"flex gap-y-5 flex-col py-1 text-lg hidden lg:flex bg-gray-800"}
+                        ulClass={"flex gap-y-5 flex-col justify-between py-1 text-lg hidden lg:flex bg-gray-800"}
                         liClass="flex"
                         data={DATA} />
 
                     <StyledButton clickFunction={() => goBack()}>
                         Back
                     </StyledButton>
-
 
                     <CustomComponent
                         setComponent={ComponentType}

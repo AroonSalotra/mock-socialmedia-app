@@ -9,7 +9,7 @@ const Chats = (props) => {
 
     const [size, setSize] = useState({
         width: 40,
-        height: 16,
+        height: 10,
         showName: false,
         setText: "hidden"
     })
@@ -20,7 +20,7 @@ const Chats = (props) => {
             showName: false, setText: "hidden"
         }
         const sizeLarge = {
-            width: 80, height: 80,
+            width: 80, height: 112,
             showName: true, setText: "block"
         }
 
@@ -32,11 +32,11 @@ const Chats = (props) => {
     // console.log(USERS[userId].userName)
     return (
         <div
-            className={`w-full h-${size.height} bg-slate-600 m-auto rounded-lg transition-all my-2`}
+            className={`w-${size.width} max-h-${size.height} bg-slate-600 m-auto rounded-lg my-2 pb-2 transition-all`}
         >
 
             <span
-                className={`h-14 absolute w-full cursor-pointer hover:bg-gray-200 opacity-10`}
+                className={`h-14 absolute w-60 cursor-pointer`}
                 id={`User ${USERS[userId].userName}`}
                 onClick={() => changeSize()} />
 

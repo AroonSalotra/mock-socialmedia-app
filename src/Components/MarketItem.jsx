@@ -40,9 +40,12 @@ const MarketItem = (props) => {
     return (
         <div key={itemID}>
             <p>{item}</p>
-            <img className="w-40 h-40 object-cover"
-                src={itemImg}
-                alt="" />
+            <div>
+                <img className="w-40 h-40 object-cover"
+                    src={itemImg}
+                    alt="" />
+                <p className="absolute translate-x-24 -translate-y-4 bg-gray-700 px-4 rounded-md">£ {price} </p>
+            </div>
 
             {showBtn ?
                 <StyledButton
@@ -51,9 +54,7 @@ const MarketItem = (props) => {
                 </StyledButton>
                 : null}
 
-            <p>
-                {price}
-            </p>
+
         </div>
     );
 }

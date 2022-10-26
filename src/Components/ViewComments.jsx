@@ -7,7 +7,7 @@ const ViewComments = (props) => {
     // console.log(props.children.length)
 
     return (
-        <div className={`flex flex-col gap-2 w-8/12 w-screen overflow-auto max-h-60 md:w-8/12 ${classList}`}>
+        <div className={`flex flex-col gap-2 w-8/12 w-screen overflow-auto max-h-60 md:w-11/12 ${classList}`}>
             {props.children.map((comment) => {
                 return <div
                     key={comment.length + props.children.length}
