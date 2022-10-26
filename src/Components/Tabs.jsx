@@ -86,7 +86,7 @@ const Tabs = (props) => {
                         data={DATA} />
 
                     <StyledButton clickFunction={() => goBack()}>
-                        Back
+                        {"<"}
                     </StyledButton>
 
                     <CustomComponent

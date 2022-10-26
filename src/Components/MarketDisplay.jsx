@@ -11,12 +11,12 @@ const MarketDisplay = (props) => {
     //     setMarketCart(current => JSON.parse(getCart))
     // }, [])
 
-
+    // flex justify-center gap-20 flex-wrap"
     return (
         <section>
             <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>
             <div className={customClass ? customClass :
-                "flex justify-center gap-20 flex-wrap"}>
+                "mx-0 lg:grid grid-cols-4 justify-center gap-20 lg:mx-64"}>
                 {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
                     return <MarketItem
                         item={item}
@@ -25,15 +25,16 @@ const MarketDisplay = (props) => {
                         sellerName={sellerName} />
                 })} */}
 
-                {MARKET.map(({ itemID }) => {
+                {MARKET.map(({ itemID, posterID }) => {
                     return <MarketItem
                         key={itemID}
                         itemID={itemID}
+                        posterID={posterID}
                         marketCart={marketCart}
                         setMarketCart={setMarketCart}
                         showBtn={true}
+                        showPoster={true}
                     />
-
                 })}
             </div>
 

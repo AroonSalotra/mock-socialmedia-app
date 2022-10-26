@@ -1,10 +1,11 @@
 import StyledButton from "./StyledButton";
 import MARKET from "../data/MARKET.json"
 import { useEffect, useState } from "react";
+import UserDisplay from "./UserDisplay";
 
 const MarketItem = (props) => {
     const [inCart, setInCart] = useState(false)
-    const { itemID, marketCart, setMarketCart, showBtn } = props;
+    const { itemID, marketCart, setMarketCart, showBtn, posterID, showPoster } = props;
 
     const getItem = MARKET[itemID]
     const { itemImg, price, item } = getItem
@@ -38,8 +39,22 @@ const MarketItem = (props) => {
     }
 
     return (
-        <div key={itemID}>
-            <p>{item}</p>
+        <div key={itemID}
+            className="w-fit mt-4">
+
+            {showPoster ? <div className="pb-4">
+                <p>Listed By:</p>
+                <UserDisplay
+                    userId={posterID}
+                    showName={true}
+                />
+            </div>
+                : null}
+
+
+
+
+            <p className="bg-gray-700 max-w-fit font-semibold px-4">{item}</p>
             <div>
                 <img className="w-40 h-40 object-cover"
                     src={itemImg}
@@ -53,7 +68,6 @@ const MarketItem = (props) => {
                     {inCart ? "Remove" : "Add"}
                 </StyledButton>
                 : null}
-
 
         </div>
     );

@@ -23,5 +23,12 @@
         "itemID": 2,
         "price": 14,
         "posterID": 5
+    },
+    {
+        "item": "Crock Pot",
+        "itemImg": "https://images.unsplash.com/photo-1612293905642-5aaa88632115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "itemID": 2,
+        "price": 14,
+        "posterID": 5
     }
 ]
