@@ -1,0 +1,35 @@
+[
+    {
+        "userId": 2,
+        "to": [
+            "yo lewy",
+            "u good?",
+            "te"
+        ],
+        "from": [
+            "ye 1 ssec",
+            "omw now",
+            "be 4 mins"
+        ]
+    },
+    {
+        "userId": 4,
+        "to": [
+            "lorem ipsum",
+            "or whatever"
+        ],
+        "from": [
+            "ye 1 ssec"
+        ]
+    },
+    {
+        "userId": 1,
+        "to": [
+            "lorem ipsum",
+            "or whatever"
+        ],
+        "from": [
+            "ye 1 ssec"
+        ]
+    }
+]

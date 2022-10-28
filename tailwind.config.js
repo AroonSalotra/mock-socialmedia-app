@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       spacing: {
         "50rem": "50rem",
-        "105": "22rem",
+        "22rem": "22rem",
         "112": "28rem"
       },
       animation: {

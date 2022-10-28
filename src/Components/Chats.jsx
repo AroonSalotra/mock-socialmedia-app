@@ -2,6 +2,8 @@ import { useState } from "react";
 import UserDisplay from "./UserDisplay";
 import InputText from "./InputText";
 import USERS from "../data/USERS.json"
+import InputChat from "./InputChat";
+
 
 const Chats = (props) => {
 
@@ -26,14 +28,11 @@ const Chats = (props) => {
 
         if (size.width === 20) return setSize(state => sizeLarge)
         setSize(state => sizeSmall)
-
     }
 
-    // console.log(USERS[userId].userName)
-    // max-h-${size.height}
     return (
         <div
-            className={`w-${size.width} w-40 h-${size.height} bg-slate-600 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500 md:transition-all`}>
+            className={`w-${size.width} h-${size.height} bg-slate-600 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500 transition-all`}>
 
             {/* <span
                 className={`h-14 absolute w-60 cursor-pointer`}
@@ -47,11 +46,10 @@ const Chats = (props) => {
                     showName={size.showName} />
             </div>
 
-            <InputText
-                setPlaceholder={"send message"}
-                addClass={`${size.setText} pl-4`}
+
+            <InputChat
                 userId={userId}
-            />
+                addClass={`${size.setText} pl-4 mt-4`} />
 
         </div>
     );

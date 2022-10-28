@@ -1,20 +1,23 @@
 import Chats from "./Chats";
+import InputChat from "./InputChat";
+import CHATS from "../data/CHATS.json"
 
 const ViewChats = () => {
-    const TEMPDATA = [
-        2, 3, 4
-    ]
-
 
     return (
         <>
             <div className="fixed bottom-0 right-10 transition-all">
 
-                <div className="flex flex-col gap-5">
-                    {/* <h3 className="w-full bg-gray-600 p-2 rounded-t-md font-semibold text-center text-2xl">Chats</h3> */}
-                    {TEMPDATA.map((elem) => {
+                <div className="flex flex-col gap-5 transition-all">
+                    {/* {TEMPDATA.map((elem) => {
                         return <Chats
                             userId={elem}
+                        />
+                    })} */}
+
+                    {CHATS.map(({ userId }) => {
+                        return <Chats
+                            userId={userId}
                         />
                     })}
 
