@@ -1,11 +1,11 @@
-const ViewChat = (props) => {
+const ChatDisplay = (props) => {
     const { data } = props;
 
     console.log(data)
 
     return (
         <section>
-            <ul className="flex flex-col gap-1 pr-4 h-60 overflow-y-auto">
+            <ul className="flex flex-col gap-1 pr-4 max-h-60 overflow-y-auto">
                 {data.map(({ to, from }, index) => {
                     return <>
                         {(to.length > from.length ? to : from)
@@ -27,4 +27,4 @@ const ViewChat = (props) => {
     );
 }
 
-export default ViewChat;
+export default ChatDisplay;

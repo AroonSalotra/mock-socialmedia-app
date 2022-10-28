@@ -16,6 +16,11 @@ const Chats = (props) => {
         setText: "hidden"
     })
 
+    const [chatHeight, setChatHeight] = useState(10);
+    const [chatWidth, setChatWidth] = useState(20);
+    const [chatName, setChatName] = useState(false);
+    const [chatDisplay, setChatDisplay] = useState("hidden");
+
     const changeSize = () => {
         const sizeSmall = {
             width: 20, height: 10,
@@ -30,9 +35,23 @@ const Chats = (props) => {
         setSize(state => sizeSmall)
     }
 
+    const debugSize = () => {
+        if (chatHeight === 10) {
+            setChatHeight(height => 96)
+            setChatWidth(width => 80)
+            setChatName(name => true)
+            setChatDisplay(display => "block")
+        } else {
+            setChatHeight(height => 10)
+            setChatWidth(width => 20)
+            setChatName(name => false)
+            setChatDisplay(display => "hidden")
+        }
+    }
+
     return (
         <div
-            className={`w-${size.width} h-${size.height} bg-slate-600 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500 transition-all`}>
+            className={`transition-all w-${chatWidth} h-${chatHeight} bg-slate-600 border-y border-blue-200 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500`}>
 
             {/* <span
                 className={`h-14 absolute w-60 cursor-pointer`}
@@ -40,16 +59,17 @@ const Chats = (props) => {
                 onClick={() => changeSize()} /> */}
 
             <div className="cursor-pointer"
-                onClick={() => changeSize()}>
+                onClick={() => debugSize()}
+                >
                 <UserDisplay
                     userId={userId}
-                    showName={size.showName} />
+                    showName={chatName} />
             </div>
 
 
             <InputChat
                 userId={userId}
-                addClass={`${size.setText} pl-4 mt-4`} />
+                addClass={`${chatDisplay} pl-4 mt-4`} />
 
         </div>
     );

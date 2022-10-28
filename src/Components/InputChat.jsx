@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import ViewComments from "./ViewComments"
-import ViewChat from "./ViewChat"
+import ChatDisplay from "./ChatDisplay"
 import CHATS from "../data/CHATS.json"
 
 const InputChat = (props) => {
@@ -38,9 +38,9 @@ const InputChat = (props) => {
 
     return (
         <section
-            className={`text-center w-50 overflow-y-auto h-60s m-auto pr-4 ${addClass}`}>
+            className={`text-center w-50 overflow-y-auto m-auto pr-4 ${addClass}`}>
 
-            <ViewChat data={[ , CHATS[index] , ]} />
+            <ChatDisplay data={[ , CHATS[index] , ]} />
 
 
             <form
