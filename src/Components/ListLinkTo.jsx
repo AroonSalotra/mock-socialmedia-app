@@ -5,10 +5,10 @@ const ListLinkTo = (props) => {
     const { data, ulClass, liClass, iconClass, key } = props;
 
     const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-full p-4 active:scale-95"
-
-
     const verifyLiClass = liClass ? liClass : ""
     const verifyUlClass = ulClass ? ulClass : ""
+    const baseClass = `${hoverClass} ${verifyLiClass}`
+
 
     return (
         <ul
@@ -20,7 +20,7 @@ const ListLinkTo = (props) => {
                     <Link to={`/mock-socialmedia-app/${linkTo}`}
                         key={id}
                         onClick={() => clickEffect()}
-                        className={`${hoverClass} ${verifyLiClass}`}>
+                        className={baseClass}>
                         {icon ?
                             <span className={iconClass ?
                                 iconClass : "text-3xl px-4"}>
@@ -32,7 +32,7 @@ const ListLinkTo = (props) => {
                     // Return <li without onclick otherwise
                     <Link to={`/mock-socialmedia-app/${linkTo}`}
                         key={id}
-                        className={`${hoverClass} ${verifyLiClass}`}>
+                        className={baseClass}>
                         {icon ?
                             <span className={iconClass ?
                                 iconClass : "text-3xl px-4"}>

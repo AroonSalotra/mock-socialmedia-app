@@ -17,26 +17,24 @@ const ListItem = (props) => {
                     <li key={text ? text : id}
                         onClick={() => clickEffect()}
                         className={`${hoverClass} ${verifyLiClass}`}
-                        id={text}
-                    >
+                        id={text} >
                         {icon ?
                             <span className={iconClass ?
                                 iconClass : "text-3xl px-4 select-none pointer-events-none"}>
-
                                 {icon}</span> : null}
+
                         {text ? text : null}
                     </li>
                     :
                     // Return <li without onclick otherwise
                     <li key={text ? text : id}
                         className={`${hoverClass} ${verifyLiClass}`}
-                        id={text}
-                    >
+                        id={text}>
                         {icon ?
                             <span className={iconClass ?
                                 iconClass : "text-3xl px-4 select-none"}>
-
                                 {icon}</span> : null}
+
                         {text ? text : null}
                     </li>
             })}

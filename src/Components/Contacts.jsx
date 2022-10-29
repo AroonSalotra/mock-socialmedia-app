@@ -19,9 +19,9 @@ const Contacts = (props) => {
     // fixed bg-gray-800 transition-all xl:relative flex flex-col gap-5 py-4
     return (
         <>
-            <section className="fixed right-5 mt-20">
+            <section className="fixed right-5 mt-24">
                 {/* <h3>Online Contacts</h3> */}
-                <div className={`flex flex-col ${display} translate-y-72 bg-gray-800 xl:flex xl:translate-y-0 mt-10`}>
+                <div className={`flex flex-col ${display} translate-y-72 xl:flex xl:translate-y-0 mt-10`}>
                     {userFilter.map(({ userName, userImg, userId }) => {
                         return <UserDisplay
                             // userImg={userImg}

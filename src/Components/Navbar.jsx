@@ -32,7 +32,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="fixed -translate-x-1/2 left-1/2 lg:block w-full">
+        <nav className="fixed -translate-x-1/2 left-1/2 lg:w-screen">
 
             <div className="flex px-5 bg-gray-800 w-fit text-2xl border-b border-gray-900 lg:w-full">
 
@@ -43,7 +43,7 @@ const Navbar = () => {
                 </button>
 
                 <ListLinkTo
-                    ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center`}
+                    ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center m-auto`}
                     data={navbarContent.listA}>
                 </ListLinkTo>
 

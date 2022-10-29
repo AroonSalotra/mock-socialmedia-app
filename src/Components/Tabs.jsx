@@ -21,10 +21,6 @@ const Tabs = (props) => {
             text: "Friends", icon: <FcBusinessContact />,
             clickEffect: (e) => handleClick(e)
         },
-        // {
-        //     text: "Groups", icon: <FcAdvertising />,
-        //     clickEffect: (e) => handleClick(e)
-        // },
         {
             text: "Market", icon: <FcBusiness />,
             clickEffect: (e) => handleClick(e)
@@ -71,14 +67,14 @@ const Tabs = (props) => {
     }, [])
 
     // useEffect(() => {
-    //     console.log("page load")
-    // }, [])
+    //     console.log(index)
+    // }, [index])
 
     return (
         <>
-            <section className="fixed overflow-hidden h-full mt-40 z-10">
+            <section className="fixed overflow-hidden h-fit mt-40 z-10 border-2 border-gray-900 border-l-0">
 
-                <div className={`-translate-x-${index} flex overflow-visible transition-all`}>
+                <div className={`transition-all -translate-x-${index} flex overflow-visible`}>
 
                     <ListItem
                         ulClass={"flex gap-y-5 flex-col justify-between py-1 text-lg hidden lg:flex bg-gray-800"}

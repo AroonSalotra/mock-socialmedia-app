@@ -35,6 +35,9 @@ const News = (props) => {
                     customClass={customClass}
                 />
             })}
+
+            <p className="text-center font-semibold text-2xl">
+            You're all caught up!</p>
         </section>
     );
 }
