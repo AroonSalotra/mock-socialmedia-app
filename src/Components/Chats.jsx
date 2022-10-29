@@ -37,8 +37,8 @@ const Chats = (props) => {
 
     const debugSize = () => {
         if (chatHeight === 10) {
-            setChatHeight(height => 96)
-            setChatWidth(width => 80)
+            setChatHeight(height => 60)
+            setChatWidth(width => 60)
             setChatName(name => true)
             setChatDisplay(display => "block")
         } else {
@@ -51,7 +51,7 @@ const Chats = (props) => {
 
     return (
         <div
-            className={`transition-all w-${chatWidth} h-${chatHeight} bg-slate-600 border-y border-blue-200 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500`}>
+            className={`transition-[width] duration-100 ease-out w-${chatWidth} h-${chatHeight} bg-slate-600 border-y border-blue-200 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500`}>
 
             {/* <span
                 className={`h-14 absolute w-60 cursor-pointer`}
@@ -60,7 +60,7 @@ const Chats = (props) => {
 
             <div className="cursor-pointer"
                 onClick={() => debugSize()}
-                >
+            >
                 <UserDisplay
                     userId={userId}
                     showName={chatName} />
