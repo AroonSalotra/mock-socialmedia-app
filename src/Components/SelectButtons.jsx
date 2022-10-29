@@ -8,10 +8,10 @@ const SelectButtons = () => {
 
     const selectIcon = (target) => {
         if (target === "check" & bgCheck === "") {
-            setBgCheck(current => "bg-lime-300")
+            setBgCheck(current => "bg-lime-700")
             setBgCross(current => "")
         } if (target === "cross") {
-            setBgCross(current => "bg-red-500")
+            setBgCross(current => "bg-red-600")
             setBgCheck(current => "")
         }
     }
@@ -22,10 +22,11 @@ const SelectButtons = () => {
 
                 <AiOutlineCheck
                     onClick={() => selectIcon("check")}
-                    className={`text-gray-200 stroke-white stroke-2 border-4 border-lime-500 rounded-lg px-2 ${bgCheck} hover:bg-lime-300`} />
+                    className={`text-gray-200 stroke-white stroke-2 border-4 border-lime-500 rounded-lg px-2 ${bgCheck} hover:bg-lime-600 active:scale-110`} />
+
                 <AiOutlineClose
                     onClick={() => selectIcon("cross")}
-                    className={`text-gray-200 stroke-white stroke-2 border-4 border-red-900 rounded-lg px-2 ${bgCross} hover:bg-red-500`} />
+                    className={`text-gray-200 stroke-white stroke-2 border-4 border-red-900 rounded-lg px-2 ${bgCross} hover:bg-red-600 active:scale-110`} />
 
 
             </div>

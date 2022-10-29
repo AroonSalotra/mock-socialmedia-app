@@ -26,7 +26,7 @@ const CustomComponent = (props) => {
                         setComponent === "News" ? <News
                             showLink={true}
                             imgClass={"w-full h-40"}
-                            customClass={"w-72"}
+                            customClass={"w-72 bg-gray-900 px-4 my-4"}
                         />
                             : setComponent === "Events" ? <Events />
                                 : null}

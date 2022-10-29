@@ -17,7 +17,7 @@ const Post = (props) => {
         <>
             <div className={checkClass}>
 
-                <div className="py-2 px-8 bg-gray-800 rounded-b-lg lg:">
+                <div className="py-2 px-8 bg-gray-800 rounded-b-lg">
 
                     {showUser ? <UserDisplay
                         userImg={userImg}
