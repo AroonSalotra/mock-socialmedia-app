@@ -45,7 +45,7 @@ function App() {
         <div className='py-5 lg:py-24'>
           <Routes>
 
-            <Route path='/mock-socialmedia-app/home'
+            <Route path='/mock-socialmedia-app/'
               element={<>
                 <PostItem users={USERS} posts={POSTS} />
               </>}>

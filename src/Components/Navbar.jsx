@@ -16,7 +16,7 @@ const Navbar = () => {
 
     const navbarContent = {
         listA: [
-            { text: <AiFillHome />, linkTo: "home", id: "nav-home" },
+            { text: <AiFillHome />, linkTo: "", id: "nav-home" },
             // { text: "Watch" },
             { text: <AiFillNotification />, linkTo: "marketplace", id: "nav-mkt" },
             // { text: "Gaming", linkTo: "gaming" },
