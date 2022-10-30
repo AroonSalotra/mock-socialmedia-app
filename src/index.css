@@ -5,3 +5,11 @@
 html {
     background: rgb(10, 12, 26);
 }
+
+.myClass {
+    border-radius: 100px;
+}
+
+.move-tab {
+    transform: translateX(-20px);
+}

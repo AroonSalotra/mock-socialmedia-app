@@ -26,6 +26,9 @@ module.exports = {
       },
       transitionProperty: {
         "width": "width"
+      },
+      blur: {
+        xs: "1px"
       }
     },
     screens: {

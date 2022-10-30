@@ -1,5 +1,5 @@
 const ListItem = (props) => {
-    const { data, ulClass, liClass, iconClass, useID, clickEffect, hideBtn } = props;
+    const { data, ulClass, liClass, iconClass, useID, clickEffect, hideBtn, showText } = props;
 
     const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md px-4 py-1"
 
@@ -24,8 +24,10 @@ const ListItem = (props) => {
                                 {icon}
                             </span> : null}
 
-                        {hideBtn ? <p className="pointer-events-none hidden md:block" >
-                            {text}</p> : <p>{text}</p>}
+                        {/* {hideBtn ? <p className="pointer-events-none hidden md:block" >
+                            {text}</p> : <p>{text}</p>} */}
+
+                        {showText ? <p>{text}</p> : null}
 
                     </li>
                     :
@@ -38,8 +40,11 @@ const ListItem = (props) => {
                                 iconClass : "text-3xl px-4 select-none"}>
                                 {icon}</span> : null}
 
-                        {hideBtn ? <p className="pointer-events-none hidden md:block" >
-                            {text}</p> : <p>{text}</p>}
+                        {/* {hideBtn ? <p className="pointer-events-none hidden md:block" >
+                            {text}</p> : <p>{text}</p>} */}
+
+                        {showText ? <p>{text}</p> : null}
+
                     </li>
             })}
 

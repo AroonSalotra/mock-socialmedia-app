@@ -2,7 +2,7 @@ import ListItem from "./ListItem";
 import { useEffect, useState } from "react";
 import StyledButton from "./StyledButton";
 import CustomComponent from "./CustomComponent";
-import { MdNavigateNext, MdClear } from "react-icons/md"
+import { MdNavigateNext, MdClear, MdNavigateBefore } from "react-icons/md"
 
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority } from "react-icons/fc"
 
@@ -10,9 +10,13 @@ const Tabs = (props) => {
     const [index, setIndex] = useState(0)
     const [crossStyle, setCrossStyle] = useState("opacity-40")
     const [ComponentType, setComponentType] = useState(null)
-    const [clickThrough, setClickThrough] = useState(null)
+    const [isActive, setIsActive] = useState(false)
 
     const { marketCart } = props;
+
+    const toggleSidebar = () => {
+        setIsActive(state => !isActive)
+    }
 
     const DATA = [
         {
@@ -34,10 +38,6 @@ const Tabs = (props) => {
     ]
 
     const handleClick = () => {
-        if (index === 0) {
-            setIndex(state => 20)
-        } else setIndex(state => 0)
-
     }
 
     const goBack = () => {
@@ -48,46 +48,20 @@ const Tabs = (props) => {
         }
     }
 
-    const toggleShow = (value) => {
-
-        if (index !== 20 & value === "show") {
-            setIndex(index => 20)
-            setCrossStyle("opacity-60")
-            setComponentType(null)
-        } else {
-            setIndex(index => 0)
-            setCrossStyle("opacity-100")
-        }
-    }
-
-    useEffect(() => {
-        const getID = (e) => {
-            const id = e.target.id
-            return id ? setComponentType(state => id) : null
-        }
-
-        window.addEventListener("click", getID)
-
-        return () => window.removeEventListener("click", getID)
-
-    }, [])
-
-    useEffect(() => {
-        console.log(index)
-    }, [index])
-
     return (
         <>
             <section className="fixed overflow-hidden h-fit mt-40 z-10 w-fit">
-                <h1>{index}</h1>
-                <div className={`transition-all -translate-x-${index} md:-translate-x-0 lg:-translate-x-${index} flex overflow-visible`}>
+                {/* <h1>{isActive.toString()}</h1> */}
+                <div className={`transition-all ${isActive ? "-translate-x-0" : "-translate-x-12"}  lg:-translate-x-0 lg: flex overflow-visible`}>
 
                     <ListItem
                         ulClass={"flex gap-y-5 flex-col justify-between py-1 text-lg lg:flex bg-gray-800"}
                         liClass="flex"
                         iconClass={"text-3xl px-0 select-none pointer-events-none"}
                         data={DATA}
-                        hideBtn={true} />
+                        hideBtn={true}
+                        showText={false}
+                    />
 
                     <StyledButton addClass={"hidden md:block"}
                         clickFunction={() => goBack()}>
@@ -99,16 +73,21 @@ const Tabs = (props) => {
                         marketCart={marketCart} />
                 </div>
 
-                {index !== 20 ? <StyledButton clickFunction={() => toggleShow("show")}
+                {isActive ? <StyledButton clickFunction={() => {
+                    toggleSidebar();
+                    setComponentType(type => null)
+                }}
                     addClass={`md:hidden h-fit text-3xl ${crossStyle} my-auto`}>
-                    <MdClear />
+                    <MdNavigateBefore />
                 </StyledButton>
                     :
-                    <StyledButton clickFunction={() => toggleShow("hide")}
+                    <StyledButton clickFunction={() => toggleSidebar()}
                         addClass={`md:hidden h-fit text-3xl ${crossStyle} my-auto`}>
                         <MdNavigateNext />
-                    </StyledButton>
-                }
+                    </StyledButton>}
+
+
+
 
             </section>
         </>

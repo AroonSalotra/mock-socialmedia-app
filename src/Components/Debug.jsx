@@ -7,46 +7,22 @@ import InputChat from "./InputChat";
 import StyledButton from "./StyledButton";
 
 const Debug = () => {
-    const [height, setHeight] = useState(40)
-    const [size, setSize] = useState({
-        width: 20,
-        height: 40,
-        showName: false,
-        setText: "hidden"
-    })
+    const [isActive, setIsActive] = useState(false)
 
-    const debugClick = () => {
-        if (height === 10) setHeight(height => 40)
-        else setHeight(height => 10)
-    }
+    // const changeState = () => isActive ? setIsActive(false) : setIsActive(true)
 
-    const changeSize = () => {
-        const sizeSmall = {
-            width: 20, height: 40,
-            showName: false, setText: "hidden"
-        }
-        const sizeLarge = {
-            width: 80, height: 96,
-            showName: true, setText: "block"
-        }
+    const changeState = () => setIsActive(state => !isActive)
 
-        if (size.width === 20) return setSize(state => sizeLarge)
-        setSize(state => sizeSmall)
-    }
-
-    // const { height } = size;
 
 
     return (
         <>
-            <div className={`w-20 h-${height} bg-red-700 m-auto transition-all`}
-                onClick={() => debugClick()}
-
-            >
-                {height}
+            <div className="flex justify-center gap-10">
+                <div className={`w-10 h-10 bg-red-500 ${isActive ? "myClass" : ""}`} />
+                <button onClick={() => changeState()}>
+                    DEBUG
+                </button>
             </div>
-
-
         </>
 
     );
