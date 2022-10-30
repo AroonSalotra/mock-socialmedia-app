@@ -17,9 +17,7 @@ const Navbar = () => {
     const navbarContent = {
         listA: [
             { text: <AiFillHome />, linkTo: "", id: "nav-home" },
-            // { text: "Watch" },
             { text: <AiFillNotification />, linkTo: "marketplace", id: "nav-mkt" },
-            // { text: "Gaming", linkTo: "gaming" },
             { text: <AiFillHdd />, linkTo: "news", id: "nav-nws" },
             { text: "Debug", linkTo: "debug", id: "nav-dbg" },
         ],
@@ -46,13 +44,6 @@ const Navbar = () => {
                     ulClass={`${display} flex flex-col lg:flex-row lg:flex gap-5 items-center m-auto`}
                     data={navbarContent.listA}>
                 </ListLinkTo>
-
-                {/* <Status /> */}
-
-                {/* <ListItem
-                    ulClass={"hidden flex-row w-full justify-end gap-10 px-4 lg:flex justify-end gap-10"}
-                    data={navbarContent.listB}>
-                </ListItem> */}
             </div>
 
         </nav>

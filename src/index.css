@@ -6,10 +6,11 @@ html {
     background: rgb(10, 12, 26);
 }
 
-.myClass {
-    border-radius: 100px;
+.sidebar-open {
+    transform: translateX(0px);
 }
 
-.move-tab {
-    transform: translateX(-20px);
+.sidebar-close {
+    transform: translateX(-48px);
+    pointer-events: none;
 }

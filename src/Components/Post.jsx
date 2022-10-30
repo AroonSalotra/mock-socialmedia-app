@@ -1,6 +1,5 @@
 import UserDisplay from "./UserDisplay";
 import Comment from "./Comment";
-import ListItem from "./ListItem";
 import USERS from "../data/USERS.json"
 
 const Post = (props) => {
