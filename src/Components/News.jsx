@@ -9,7 +9,7 @@ const News = (props) => {
     // console.log(data)
 
     return (
-        <section className="flex flex-col p-5 gap-2">
+        <section className="sm:w-fit flex flex-col gap-2">
 
             {showLink ? <Link className="m-auto"
                 to="mock-socialmedia-app/news">
@@ -26,7 +26,9 @@ const News = (props) => {
                     postImg={image}
                     postDate={source}
                     userImg={image}
-                    imgClass={imgClass}
+                    // imgClass={imgClass}
+                    imgClass={"max-w-full h-auto"}
+                    // imgClass={"w-40 h-auto sm:w-full h-full"}
                     customClass={customClass}
                 />
             })}

@@ -16,24 +16,20 @@ const CustomComponent = (props) => {
     return (
         <>
             {/* <CustomComponent /> */}
-            <div className="bg-gray-800 h-112 overflow-auto">
+            <div className="bg-gray-800 overflow-auto h-112 sm:w-fit">
 
                 {setComponent === "Friends" ? <Friends /> :
                     setComponent === "Market" ? <Market
-                        customClass={"flex-col"}
                         marketCart={marketCart}
                     /> :
                         setComponent === "News" ? <News
                             showLink={true}
                             imgClass={"w-full h-40"}
-                            customClass={"w-72 bg-gray-900 px-4 my-4"}
+                            customClass={" sm:w-72 bg-gray-900 px-4 my-4"}
                         />
                             : setComponent === "Events" ? <Events />
                                 : null}
             </div>
-
-
-
 
             {/* {customProps ? <CustomComponent  /> : null} */}
         </>

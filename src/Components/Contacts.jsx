@@ -21,12 +21,10 @@ const Contacts = (props) => {
         <>
             <section className="fixed right-5 mt-24">
                 {/* <h3>Online Contacts</h3> */}
-                <div className={`flex flex-col ${display} translate-y-72 xl:flex xl:translate-y-0 mt-10`}>
-                    {userFilter.map(({ userName, userImg, userId }) => {
+                <div className={`flex flex-col ${display} bg-gray-800 xl:flex :translate-y-0 mt-10`}>
+                    {userFilter.map(({ userId }) => {
                         return <UserDisplay
-                            // userImg={userImg}
                             showStatus={true}
-                            // userName={userName}
                             hoverEffect={true}
                             userClass={"lg:w-64"}
                             userId={userId}
@@ -37,9 +35,8 @@ const Contacts = (props) => {
                 </div>
 
                 <button
-                    className="fixed bottom-20 right-10 xl:hidden"
-                    onClick={() => handleClick()}
-                >
+                    className="fixed top-20 right-10 xl:hidden"
+                    onClick={() => handleClick()}>
                     <AiFillMessage className="text-5xl" />
                 </button>
 

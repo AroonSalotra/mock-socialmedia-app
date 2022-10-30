@@ -15,7 +15,7 @@ const Market = (props) => {
     // }, [marketCart])
 
     return (
-        <div className="flex flex-col p-5">
+        <div className="flex flex-col p-5 w-fit">
             <Link to={"/mock-socialmedia-app/marketplace"}>
                 <StyledButton>
                     Go to Marketplace

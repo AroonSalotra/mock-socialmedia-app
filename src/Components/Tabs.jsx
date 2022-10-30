@@ -7,12 +7,16 @@ import Post from "./Post";
 import StyledButton from "./StyledButton";
 import MarketDisplay from "./MarketDisplay";
 import CustomComponent from "./CustomComponent";
+import { GrNext, GrPrevious } from "react-icons/gr"
+import { MdNavigateNext, MdClear } from "react-icons/md"
 
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
 
 const Tabs = (props) => {
     const [index, setIndex] = useState(0)
+    const [crossStyle, setCrossStyle] = useState("opacity-40")
     const [ComponentType, setComponentType] = useState(null)
+    const [clickThrough, setClickThrough] = useState(null)
 
     const { marketCart } = props;
 
@@ -36,23 +40,31 @@ const Tabs = (props) => {
     ]
 
     const handleClick = () => {
-        const checkIndex = index === 0 ?
-            setIndex(state => 40) :
-            setIndex(state => 0)
+        if (index === 0) {
+            setIndex(state => 20)
+        } else setIndex(state => 0)
 
-        return checkIndex
     }
 
     const goBack = () => {
-        const resetIndex = index !== 0 ? setIndex(index => 0) : null
-        const resetComponentType = setComponentType(current => null)
-
-        return resetIndex & resetComponentType
+        if (index === 0) {
+            setIndex(index => 20)
+            setComponentType(current => null)
+            setCrossStyle("opacity-100")
+        }
     }
 
-    // useEffect(() => {
-    //     console.log(ComponentType)
-    // }, [ComponentType])
+    const toggleShow = (value) => {
+
+        if (index !== 20 & value === "show") {
+            setIndex(index => 20)
+            setCrossStyle("opacity-60")
+            setComponentType(null)
+        } else {
+            setIndex(index => 0)
+            setCrossStyle("opacity-100")
+        }
+    }
 
     useEffect(() => {
         const getID = (e) => {
@@ -66,30 +78,43 @@ const Tabs = (props) => {
 
     }, [])
 
-    // useEffect(() => {
-    //     console.log(index)
-    // }, [index])
+    useEffect(() => {
+        console.log(index)
+    }, [index])
 
     return (
         <>
-            <section className="fixed overflow-hidden h-fit mt-40 z-10 border-2 border-gray-900 border-l-0">
-
-                <div className={`transition-all -translate-x-${index} flex overflow-visible`}>
+            <section className="fixed overflow-hidden h-fit mt-40 z-10 w-fit">
+                <h1>{index}</h1>
+                <div className={`transition-all -translate-x-${index} md:-translate-x-0 lg:-translate-x-${index} flex overflow-visible`}>
 
                     <ListItem
-                        ulClass={"flex gap-y-5 flex-col justify-between py-1 text-lg hidden lg:flex bg-gray-800"}
+                        ulClass={"flex gap-y-5 flex-col justify-between py-1 text-lg lg:flex bg-gray-800"}
                         liClass="flex"
-                        data={DATA} />
+                        iconClass={"text-3xl px-0 select-none pointer-events-none"}
+                        data={DATA}
+                        hideBtn={true} />
 
-                    <StyledButton clickFunction={() => goBack()}>
-                        {"<"}
+                    <StyledButton addClass={"hidden md:block"}
+                        clickFunction={() => goBack()}>
+                        <div className={"w-4 h-4 rounded-full border-2 border-gray-200"} />
                     </StyledButton>
 
                     <CustomComponent
                         setComponent={ComponentType}
                         marketCart={marketCart} />
-
                 </div>
+
+                {index !== 20 ? <StyledButton clickFunction={() => toggleShow("show")}
+                    addClass={`md:hidden h-fit text-3xl ${crossStyle} my-auto`}>
+                    <MdClear />
+                </StyledButton>
+                    :
+                    <StyledButton clickFunction={() => toggleShow("hide")}
+                        addClass={`md:hidden h-fit text-3xl ${crossStyle} my-auto`}>
+                        <MdNavigateNext />
+                    </StyledButton>
+                }
 
             </section>
         </>
