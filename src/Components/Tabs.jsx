@@ -1,16 +1,10 @@
 import ListItem from "./ListItem";
 import { useEffect, useState } from "react";
-import SearchBar from "./SearchBar";
-import Friends from "./SidebarComponents,/Friends";
-import Market from "./SidebarComponents,/Market";
-import Post from "./Post";
 import StyledButton from "./StyledButton";
-import MarketDisplay from "./MarketDisplay";
 import CustomComponent from "./CustomComponent";
-import { GrNext, GrPrevious } from "react-icons/gr"
 import { MdNavigateNext, MdClear } from "react-icons/md"
 
-import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority, FcAdvertising, FcBinoculars, FcNook, FcNfcSign, FcPlus, FcRatings } from "react-icons/fc"
+import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority } from "react-icons/fc"
 
 const Tabs = (props) => {
     const [index, setIndex] = useState(0)

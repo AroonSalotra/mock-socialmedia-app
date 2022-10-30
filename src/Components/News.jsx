@@ -4,7 +4,7 @@ import StyledButton from "./StyledButton";
 import { Link } from "react-router-dom";
 
 const News = (props) => {
-    const { imgClass, customClass, showLink } = props;
+    const {customClass, showLink } = props;
     const data = LocalData
     // console.log(data)
 
