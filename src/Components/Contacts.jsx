@@ -19,7 +19,7 @@ const Contacts = (props) => {
     // fixed bg-gray-800 transition-all xl:relative flex flex-col gap-5 py-4
     return (
         <>
-            <section className="fixed right-5 mt-24">
+            <section className="fixed right-5 mt-40 pb-8 border-y-4 rounded-md border-gray-700">
                 {/* <h3>Online Contacts</h3> */}
                 <div className={`flex flex-col ${display} bg-gray-800 xl:flex :translate-y-0 mt-10`}>
                     {userFilter.map(({ userId }) => {

@@ -15,18 +15,6 @@ html {
     pointer-events: none;
 }
 
-.red {
-    @apply bg-red-700
-}
-
-.lime {
-    @apply bg-lime-600
-}
-
-.amber {
-    @apply bg-amber-600
-}
-
 .debug-class {
     @apply opacity-0
 }
@@ -37,4 +25,30 @@ html {
 
 .hide-chat {
     @apply opacity-0 h-0 w-4
+}
+
+.app {
+    @apply text-white bg-gray-800
+}
+
+.border-y {
+    @apply border-y-2 border-gray-700 rounded-md
+}
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    @apply w-2
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100 
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500
 }

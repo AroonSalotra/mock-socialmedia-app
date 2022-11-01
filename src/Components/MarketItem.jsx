@@ -41,7 +41,7 @@ const MarketItem = (props) => {
 
     return (
         <div key={itemID}
-            className="w-fit mt-4">
+            className="w-fit mt-4 py-4">
 
             {showPoster ? <div className="pb-4">
                 <p>Listed By:</p>

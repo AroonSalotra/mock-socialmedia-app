@@ -31,7 +31,7 @@ function App() {
   return (
 
     <BrowserRouter>
-      <div className="text-white bg-gray-800">
+      <div className="app">
         <Navbar />
 
         <Tabs

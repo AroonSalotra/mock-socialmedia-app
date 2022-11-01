@@ -56,7 +56,7 @@ const Tabs = (props) => {
 
     return (
         <>
-            <section className={`fixed overflow-hidden h-fit mt-40 z-10 w-fit ${isActive ? "" : "pointer-events-none"} md:pointer-events-auto`}>
+            <section className={`fixed border-y-2 border-gray-700 overflow-hidden h-fit mt-40 z-10 w-fit ${isActive ? "" : "pointer-events-none"} md:pointer-events-auto`}>
                 {/* <h1>{isActive.toString()}</h1> */}
                 <div className={`transition-all ${isActive ? "sidebar-open" : "sidebar-close"}  lg:-translate-x-0  lg: flex overflow-visible !pointer-events-auto`}>
 
