@@ -5,7 +5,8 @@ import UserDisplay from "./UserDisplay";
 
 const MarketItem = (props) => {
     const [inCart, setInCart] = useState(false)
-    const { itemID, marketCart, setMarketCart, showBtn, posterID, showPoster } = props;
+    const { itemID, marketCart, setMarketCart, showBtn,
+        posterID, showPoster, hidePrice } = props;
 
     const getItem = MARKET[itemID]
     const { itemImg, price, item } = getItem
@@ -55,7 +56,11 @@ const MarketItem = (props) => {
                 <img className="w-40 h-40 object-cover"
                     src={itemImg}
                     alt="" />
-                <p className="absolute translate-x-24 -translate-y-4 bg-gray-700 px-4 rounded-md">£ {price} </p>
+
+                {hidePrice ? null :
+                    <p className="absolute translate-x-24 -translate-y-4 bg-gray-700 px-4 rounded-md">£ {price} </p>
+                }
+
             </div>
 
             {showBtn ?

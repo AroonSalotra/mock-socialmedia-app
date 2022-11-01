@@ -27,7 +27,9 @@ const Market = (props) => {
             {marketCart.map(({ id }) => {
                 return <div key={id}>
                     <MarketItem
-                        itemID={id} />
+                        itemID={id}
+                        hidePrice={true} />
+
                 </div>
             })}
         </div>

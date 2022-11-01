@@ -16,7 +16,7 @@ const MarketDisplay = (props) => {
         <section>
             <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>
             <div className={customClass ? customClass :
-                "mx-0 lg:grid grid-cols-4 justify-center gap-20 lg:mx-64"}>
+                "flex flex-col items-center md:grid grid-cols-4 justify-center gap-20 lg:mx-64"}>
                 {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
                     return <MarketItem
                         item={item}
