@@ -14,3 +14,27 @@ html {
     transform: translateX(-48px);
     pointer-events: none;
 }
+
+.red {
+    @apply bg-red-700
+}
+
+.lime {
+    @apply bg-lime-600
+}
+
+.amber {
+    @apply bg-amber-600
+}
+
+.debug-class {
+    @apply opacity-0
+}
+
+.show-chat {
+    @apply w-60
+}
+
+.hide-chat {
+    @apply opacity-0 h-0 w-4
+}

@@ -24,9 +24,6 @@ module.exports = {
           "100%": { opacity: "1" }
         }
       },
-      transitionProperty: {
-        "width": "width"
-      },
       blur: {
         xs: "1px"
       }

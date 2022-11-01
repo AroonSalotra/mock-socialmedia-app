@@ -1,27 +1,32 @@
 import DebugComponent from "./DebugComponent";
 import { useEffect, useRef, useState } from "react";
-import Events from "./SidebarComponents,/Events";
-import SelectButtons from "./SelectButtons";
-import Market from "./SidebarComponents,/Market";
-import InputChat from "./InputChat";
-import StyledButton from "./StyledButton";
 
 const Debug = () => {
+
     const [isActive, setIsActive] = useState(false)
 
-    // const changeState = () => isActive ? setIsActive(false) : setIsActive(true)
-
-    const changeState = () => setIsActive(state => !isActive)
-
-
+    const myData = [
+        { id: 0, addClass: "red" },
+        { id: 1, addClass: "lime" },
+        { id: 2, addClass: "amber" },
+    ]
 
     return (
         <>
-            <div className="flex justify-center gap-10">
-                <div className={`w-10 h-10 bg-red-500 ${isActive ? "myClass" : ""}`} />
-                <button onClick={() => changeState()}>
-                    DEBUG
-                </button>
+            {/* <div className={`flex gap-5 justify-center`}>
+                {myData.map(({ id, addClass }) => {
+                    return <>
+                        <DebugComponent
+                            id={id}
+                            addClass={addClass} />
+                    </>
+                })}
+            </div> */}
+
+            <div className="flex justify-center gap-5 border-2">
+                <DebugComponent />
+                <DebugComponent />
+                <DebugComponent />
             </div>
         </>
 

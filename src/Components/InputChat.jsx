@@ -5,6 +5,8 @@ import CHATS from "../data/CHATS.json"
 
 const InputChat = (props) => {
 
+    const [toggleShow, setToggleShow] = useState(false)
+
     const { addClass, userId } = props;
 
     const [msg, setMsg] = useState("")
@@ -33,36 +35,47 @@ const InputChat = (props) => {
     // console.log(findArray()) 
 
     const arr = []
-    console.log([ , CHATS[index] , ])
+    console.log([, CHATS[index],])
 
 
     return (
-        <section
-            className={`text-center w-50 overflow-y-auto m-auto pr-4 ${addClass}`}>
+        <>
+            <section
+                className={`text-center w-50 overflow-y-auto m-auto pr-4 ${addClass}`}>
 
-            <ChatDisplay data={[ , CHATS[index] , ]} />
+                <ChatDisplay data={[, CHATS[index],]} />
 
 
-            <form
-                action=""
-                onSubmit={(e) => e.preventDefault(e)}>
+                <form
+                    action=""
+                    onSubmit={(e) => e.preventDefault(e)}>
 
-                <input
-                    className="text-white w-full my-4 bg-gray-700 pl-2 py-1 rounded-md"
-                    value={msg}
-                    onChange={(e) => handleChange(e)}
-                    type="text"
-                    name=""
-                    id="" />
+                    <input
+                        className="text-white w-full my-4 bg-gray-800 pl-2 py-1 rounded-md"
+                        value={msg}
+                        onChange={(e) => handleChange(e)}
+                        type="text"
+                        name=""
+                        id="" />
 
-                <button
-                    onClick={() => handleSubmit()}
-                    type="submit">
-                </button>
+                    <button
+                        onClick={() => handleSubmit()}
+                        type="submit">
+                    </button>
 
-            </form>
+                </form>
 
-        </section>
+
+
+            </section>
+
+            {/* <button
+                onClick={() => setToggleShow(!toggleShow)} >
+                OPEN/CLOSE
+            </button> */}
+
+            {/* <div className="w-full h-4 bg-lime-200 z-20" /> */}
+        </>
     );
 }
 

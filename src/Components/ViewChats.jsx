@@ -6,23 +6,15 @@ const ViewChats = () => {
 
     return (
         <>
-            <div className="fixed bottom-0 right-10 transition-all">
+            <div className="fixed bottom-10 right-10 z-30">
 
-                <div className="flex flex-col gap-5 transition-all">
-                    {/* {TEMPDATA.map((elem) => {
-                        return <Chats
-                            userId={elem}
-                        />
-                    })} */}
-
+                <div className="flex items-end gap-1">
                     {CHATS.map(({ userId }) => {
-                        return <Chats
-                            userId={userId}
-                        />
+                        return <>
+                            <Chats userId={userId} />
+                        </>
                     })}
-
                 </div>
-
             </div>
         </>
     );

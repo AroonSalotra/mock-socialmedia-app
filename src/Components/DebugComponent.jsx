@@ -2,56 +2,27 @@ import { useState } from "react";
 import UserDisplay from "./UserDisplay";
 import InputText from "./InputText";
 import USERS from "../data/USERS.json"
+import { useEffect } from "react";
 
 const DebugComponent = (props) => {
+    const [isActive, setIsActive] = useState(false)
 
-    const { userId } = props;
+    const { id, addClass } = props;
 
-    const [size, setSize] = useState({
-        width: 40,
-        height: 16,
-        showName: false,
-        setText: "hidden"
-    })
-
-    const changeSize = () => {
-        const sizeSmall = {
-            width: 40, height: 16,
-            showName: false, setText: "hidden"
-        }
-        const sizeLarge = {
-            width: 80, height: 80,
-            showName: true, setText: "block"
-        }
-
-        if (size.width === 40) return setSize(state => sizeLarge)
-        setSize(state => sizeSmall)
-
-    }
-
-    // console.log(USERS[userId].userName)
+    useEffect(() => {
+        console.log(isActive.toString())
+    }, [isActive])
+    // ${isActive ? "height-cap" : ""}
     return (
-        <div
-            className={`w-full h-${size.height} bg-slate-600 m-auto rounded-lg transition-all my-2`}
-        >
+        <>
+            <div className="flex flex-col justify-cente items-center">
 
-            <span
-                className={`h-14 absolute w-full cursor-pointer hover:bg-gray-200 opacity-10`}
-                id={`User ${USERS[userId].userName}`}
-                onClick={() => changeSize()} />
-
-            <UserDisplay
-                userId={userId}
-                showName={size.showName}
-            />
-
-            <InputText
-                setPlaceholder={"send message"}
-                addClass={`${size.setText} pl-4`}
-                userId={userId}
-            />
-
-        </div>
+                <div className={`w-32 h-20 bg-lime-700 select-none ${isActive ? "" : "debug-class"} transition-all`} />
+                <div className={`w-40 h-10 bg-lime-900 cursor-pointer`}
+                    onClick={() =>
+                        setIsActive(state => !isActive)} />
+            </div>
+        </>
     );
 }
 

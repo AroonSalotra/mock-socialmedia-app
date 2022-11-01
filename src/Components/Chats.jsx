@@ -16,10 +16,7 @@ const Chats = (props) => {
         setText: "hidden"
     })
 
-    const [chatHeight, setChatHeight] = useState(10);
-    const [chatWidth, setChatWidth] = useState(20);
-    const [chatName, setChatName] = useState(false);
-    const [chatDisplay, setChatDisplay] = useState("hidden");
+    const [toggleShow, setToggleShow] = useState(false)
 
     const changeSize = () => {
         const sizeSmall = {
@@ -35,41 +32,20 @@ const Chats = (props) => {
         setSize(state => sizeSmall)
     }
 
-    const debugSize = () => {
-        if (chatHeight === 10) {
-            setChatHeight(height => 60)
-            setChatWidth(width => 60)
-            setChatName(name => true)
-            setChatDisplay(display => "block")
-        } else {
-            setChatHeight(height => 10)
-            setChatWidth(width => 20)
-            setChatName(name => false)
-            setChatDisplay(display => "hidden")
-        }
-    }
-
     return (
         <div
-            className={`transition-[width] duration-100 ease-out w-${chatWidth} h-${chatHeight} bg-slate-600 border-y border-blue-200 m-auto rounded-lg my-2 py-2 flex flex-col-reverse hover:bg-slate-500`}>
-
-            {/* <span
-                className={`h-14 absolute w-60 cursor-pointer`}
-                id={`User ${USERS[userId].userName}`}
-                onClick={() => changeSize()} /> */}
-
-            <div className="cursor-pointer"
-                onClick={() => debugSize()}
-            >
-                <UserDisplay
-                    userId={userId}
-                    showName={chatName} />
-            </div>
-
+            className={`bg-gray-700 ${toggleShow ? "rounded-md pb-2" : "rounded-lg pb-3 w-20"}`}>
 
             <InputChat
                 userId={userId}
-                addClass={`${chatDisplay} pl-4 mt-4`} />
+                addClass={`pl-4 mt-4 transition-opacity duration-300 ${toggleShow ? "show-chat" : "hide-chat"}`} />
+
+            <div className="cursor-pointer"
+                onClick={() => setToggleShow(state => !toggleShow)} >
+                <UserDisplay
+                    userId={userId}
+                    showName={toggleShow ? true : false} />
+            </div>
 
         </div>
     );
