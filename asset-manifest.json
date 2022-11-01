@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mock-socialmedia-app/static/css/main.aac7178c.css",
-    "main.js": "/mock-socialmedia-app/static/js/main.73cc7e16.js",
+    "main.css": "/mock-socialmedia-app/static/css/main.cdf00742.css",
+    "main.js": "/mock-socialmedia-app/static/js/main.c8bcfe29.js",
     "static/js/787.d9fdfb85.chunk.js": "/mock-socialmedia-app/static/js/787.d9fdfb85.chunk.js",
     "index.html": "/mock-socialmedia-app/index.html",
-    "main.aac7178c.css.map": "/mock-socialmedia-app/static/css/main.aac7178c.css.map",
-    "main.73cc7e16.js.map": "/mock-socialmedia-app/static/js/main.73cc7e16.js.map",
+    "main.cdf00742.css.map": "/mock-socialmedia-app/static/css/main.cdf00742.css.map",
+    "main.c8bcfe29.js.map": "/mock-socialmedia-app/static/js/main.c8bcfe29.js.map",
     "787.d9fdfb85.chunk.js.map": "/mock-socialmedia-app/static/js/787.d9fdfb85.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aac7178c.css",
-    "static/js/main.73cc7e16.js"
+    "static/css/main.cdf00742.css",
+    "static/js/main.c8bcfe29.js"
   ]
 }
