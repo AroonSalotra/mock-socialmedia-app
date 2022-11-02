@@ -5,7 +5,6 @@ import USERS from "./data/USERS.json"
 import POSTS from "./data/POSTS.json"
 import Tabs from './components/Tabs';
 import MarketDisplay from './components/MarketDisplay';
-import Gaming from './components/Gaming';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Debug from './components/Debug';
 import { useEffect, useState } from 'react';
@@ -57,13 +56,6 @@ function App() {
                   <MarketDisplay users={USERS}
                     marketCart={marketCart}
                     setMarketCart={setMarketCart} />
-                </>} >
-            </Route>
-
-            <Route path='/mock-socialmedia-app/gaming'
-              element={
-                <>
-                  <Gaming />
                 </>} >
             </Route>
 

@@ -10,8 +10,6 @@ const Post = (props) => {
 
     const checkClass = customClass ? customClass : "flex flex-col bg-gray-900 text-white items-center m-auto rounded-t-lg mb-4 shadow-md shadow-slate-900 w-full transition-all animate-fade-in lg:w-50rem mt-4"
 
-    // console.log(userId)
-
     return (
         <>
             <div className={checkClass}>

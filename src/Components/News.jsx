@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const News = (props) => {
     const { customClass, showLink } = props;
     const data = LocalData
-    // console.log(data)
 
     return (
         <section className="sm:w-fit flex flex-col gap-2 m-auto pt-4">
@@ -26,9 +25,7 @@ const News = (props) => {
                     postImg={image}
                     postDate={source}
                     userImg={image}
-                    // imgClass={imgClass}
                     imgClass={"max-w-full h-auto"}
-                    // imgClass={"w-40 h-auto sm:w-full h-full"}
                     customClass={customClass}
                 />
             })}

@@ -1,36 +1,12 @@
 import { useState } from "react";
 import UserDisplay from "./UserDisplay";
-import InputText from "./InputText";
-import USERS from "../data/USERS.json"
 import InputChat from "./InputChat";
-
 
 const Chats = (props) => {
 
     const { userId } = props;
 
-    const [size, setSize] = useState({
-        width: 20,
-        height: 10,
-        showName: false,
-        setText: "hidden"
-    })
-
     const [toggleShow, setToggleShow] = useState(false)
-
-    const changeSize = () => {
-        const sizeSmall = {
-            width: 20, height: 10,
-            showName: false, setText: "hidden"
-        }
-        const sizeLarge = {
-            width: 80, height: 96,
-            showName: true, setText: "block"
-        }
-
-        if (size.width === 20) return setSize(state => sizeLarge)
-        setSize(state => sizeSmall)
-    }
 
     return (
         <div

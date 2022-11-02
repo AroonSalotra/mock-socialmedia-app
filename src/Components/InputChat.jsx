@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react"
-import ViewComments from "./ViewComments"
+import { useState } from "react"
 import ChatDisplay from "./ChatDisplay"
 import CHATS from "../data/CHATS.json"
 
 const InputChat = (props) => {
 
-    const [toggleShow, setToggleShow] = useState(false)
 
     const { addClass, userId } = props;
 
@@ -18,25 +16,12 @@ const InputChat = (props) => {
     const getIndex = (elem) => elem.userId === userId
     const index = CHATS.findIndex(getIndex)
 
-    const findArray = () => {
-        const getIndex = (elem) => elem.userId === userId
-        const index = CHATS.findIndex(getIndex)
-    }
-
     const handleSubmit = () => {
         if (msg.length) {
-            // CHATS[0].to.push(msg)
             CHATS[index].to.push(msg)
             setMsg("")
         }
     }
-
-    // console.log(`ID: ${userId} Index:${findArray()}`)
-    // console.log(findArray()) 
-
-    const arr = []
-    console.log([, CHATS[index],])
-
 
     return (
         <>
@@ -44,7 +29,6 @@ const InputChat = (props) => {
                 className={`text-center w-50 overflow-y-auto m-auto pr-4 ${addClass}`}>
 
                 <ChatDisplay data={[, CHATS[index],]} />
-
 
                 <form
                     action=""
@@ -65,16 +49,7 @@ const InputChat = (props) => {
 
                 </form>
 
-
-
             </section>
-
-            {/* <button
-                onClick={() => setToggleShow(!toggleShow)} >
-                OPEN/CLOSE
-            </button> */}
-
-            {/* <div className="w-full h-4 bg-lime-200 z-20" /> */}
         </>
     );
 }

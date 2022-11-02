@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import ViewComments from "./ViewComments"
 
 const InputText = (props) => {
     const [currentComment, setCurrentComment] = useState("")
     const [prevComment, setPrevComment] = useState([])
 
-    const { userId, type } = props;
+    const { type } = props;
 
     const { setPlaceholder, addClass } = props;
 
@@ -19,9 +19,6 @@ const InputText = (props) => {
             setCurrentComment("")
         } return null
     }
-
-    console.log(userId)
-
 
     return (
         <>

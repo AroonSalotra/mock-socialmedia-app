@@ -2,7 +2,7 @@ import ListItem from "./ListItem";
 import { useEffect, useState } from "react";
 import StyledButton from "./StyledButton";
 import CustomComponent from "./CustomComponent";
-import { MdNavigateNext, MdClear, MdNavigateBefore } from "react-icons/md"
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md"
 
 import { FcBusinessContact, FcBusiness, FcAlarmClock, FcHighPriority } from "react-icons/fc"
 
@@ -38,10 +38,7 @@ const Tabs = (props) => {
 
     const handleClick = () => {
     }
-
-    const goBack = () => {
-    }
-
+    
     useEffect(() => {
         const getID = (e) => {
             const id = e.target.id

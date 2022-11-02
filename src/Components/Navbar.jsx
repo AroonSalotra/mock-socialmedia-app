@@ -1,7 +1,6 @@
 import { AiFillMessage, AiFillCustomerService, AiFillNotification, AiFillHome, AiFillHdd } from "react-icons/ai"
 import { GiHamburgerMenu } from "react-icons/gi"
 import ListLinkTo from "./ListLinkTo";
-import ListItem from "./ListItem";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -18,7 +17,7 @@ const Navbar = () => {
             { text: <AiFillHome />, linkTo: "", id: "nav-home" },
             { text: <AiFillNotification />, linkTo: "marketplace", id: "nav-mkt" },
             { text: <AiFillHdd />, linkTo: "news", id: "nav-nws" },
-            { text: "Debug", linkTo: "debug", id: "nav-dbg" },
+            // { text: "Debug", linkTo: "debug", id: "nav-dbg" },
         ],
         listB: [
             { icon: <AiFillMessage />, id: "icon-nav-msg" },

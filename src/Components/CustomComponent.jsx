@@ -1,21 +1,14 @@
 import Friends from "./SidebarComponents,/Friends";
 import Market from "./SidebarComponents,/Market";
-import MarketDisplay from "./MarketDisplay";
 import News from "./News";
 import Events from "./SidebarComponents,/Events";
 
-import { useState } from "react";
-
 const CustomComponent = (props) => {
-    const [customProps, setCustomProps] = useState(false)
 
     const { setComponent, marketCart } = props;
 
-    // console.log(marketCart)
-
     return (
         <>
-            {/* <CustomComponent /> */}
             <div className="bg-gray-800 overflow-auto h-112 sm:w-fit">
 
                 {setComponent === "Friends" ? <Friends /> :
@@ -31,7 +24,6 @@ const CustomComponent = (props) => {
                                 : null}
             </div>
 
-            {/* {customProps ? <CustomComponent  /> : null} */}
         </>
     );
 }

@@ -1,5 +1,5 @@
 const ListItem = (props) => {
-    const { data, ulClass, liClass, iconClass, useID, clickEffect, hideBtn, hideText } = props;
+    const { data, ulClass, liClass, iconClass, hideText } = props;
 
     const hoverClass = "hover:bg-gray-700 cursor-pointer rounded-md px-4 py-1"
 
@@ -24,11 +24,7 @@ const ListItem = (props) => {
                                 {icon}
                             </span> : null}
 
-                        {/* {hideBtn ? <p className="pointer-events-none hidden md:block" >
-                            {text}</p> : <p>{text}</p>} */}
-
                         {hideText ? null : <p>{text}</p>}
-
                     </li>
                     :
                     // Return <li without onclick otherwise
@@ -40,12 +36,7 @@ const ListItem = (props) => {
                                 iconClass : "text-3xl px-4 select-none"}>
                                 {icon}</span> : null}
 
-                        {/* {hideBtn ? <p className="pointer-events-none hidden md:block" >
-                            {text}</p> : <p>{text}</p>} */}
-
                         {hideText ? null : <p>{text}</p>}
-
-
                     </li>
             })}
 

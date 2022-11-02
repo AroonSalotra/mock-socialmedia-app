@@ -4,9 +4,6 @@ import USERS from "../data/USERS.json"
 
 const ListPost = () => {
 
-    // const { users, posts } = props;
-
-
     return (
         <section className="pt-4 flex flex-col gap-16 pt-0">
             {POSTS.map(({ postDate, postImg, postText, posterID, postLink }) => {

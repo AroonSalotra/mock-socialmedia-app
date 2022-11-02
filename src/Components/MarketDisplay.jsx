@@ -1,29 +1,13 @@
-import { useEffect } from "react";
 import MARKET from "../data/MARKET.json"
 import MarketItem from "./MarketItem";
-import Post from "./Post";
 
 const MarketDisplay = (props) => {
-    const { users, marketCart, setMarketCart, customClass } = props
-
-    // useEffect(() => {
-    //     const getCart = window.localStorage.getItem("CART")
-    //     setMarketCart(current => JSON.parse(getCart))
-    // }, [])
-
-    // flex justify-center gap-20 flex-wrap"
+    const { marketCart, setMarketCart, customClass } = props
     return (
         <section>
-            {/* <h1 className="text-white text-center text-3xl">This is the marketplace!</h1> */}
+        
             <div className={customClass ? customClass :
                 "flex flex-col items-center md:grid grid-cols-3 justify-center gap-20 pt-4 lg:mx-64"}>
-                {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
-                    return <MarketItem
-                        item={item}
-                        itemImg={itemImg}
-                        price={price}
-                        sellerName={sellerName} />
-                })} */}
 
                 {MARKET.map(({ itemID, posterID }) => {
                     return <MarketItem
@@ -37,12 +21,6 @@ const MarketDisplay = (props) => {
                     />
                 })}
             </div>
-
-            {/* {marketCart.map(({ id, name }) => {
-                return <p className="text-center">
-                    {name}
-                </p>
-            })} */}
 
         </section>
     );

@@ -1,4 +1,3 @@
-import { GrCheckmark, GrClose } from "react-icons/gr"
 import { AiOutlineClose, AiOutlineCheck } from "react-icons/ai"
 import { useState } from "react"
 
