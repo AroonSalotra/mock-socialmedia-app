@@ -56,7 +56,7 @@ const Tabs = (props) => {
 
     return (
         <>
-            <section className={`fixed border-y-2 border-gray-700 overflow-hidden h-fit mt-40 z-10 w-fit ${isActive ? "" : "pointer-events-none"} md:pointer-events-auto`}>
+            <section className={`fixed border-gray-700 overflow-hidden h-fit mt-40 z-10 w-fit xl:border-y ${isActive ? "" : "pointer-events-none"} md:pointer-events-auto`}>
                 {/* <h1>{isActive.toString()}</h1> */}
                 <div className={`transition-all ${isActive ? "sidebar-open" : "sidebar-close"}  lg:-translate-x-0  lg: flex overflow-visible !pointer-events-auto`}>
 
@@ -85,13 +85,13 @@ const Tabs = (props) => {
                         toggleSidebar();
                         setComponentType(type => null)
                     }}
-                    addClass={`md:hidden h-fit text-3xl ${crossStyle} my-auto `}>
+                    addClass={`lg:hidden h-fit text-3xl ${crossStyle} my-auto `}>
                     <MdNavigateBefore />
                 </StyledButton>
                     :
                     <StyledButton
                         clickFunction={() => toggleSidebar()}
-                        addClass={`md:hidden h-fit text-3xl ${crossStyle} my-auto pointer-events-auto`}>
+                        addClass={`lg:hidden h-fit text-3xl ${crossStyle} my-auto pointer-events-auto`}>
                         <MdNavigateNext />
                     </StyledButton>}
 

@@ -26,15 +26,11 @@ const Post = (props) => {
                     />
                         : null}
 
-
-
                     <p className="text-gray-400 text-center">
                         {`Posted on ${postDate}`}</p>
                 </div>
 
-                <p
-                    className="py-4"
-                >
+                <p className="py-4">
                     {postText}
                 </p>
 
@@ -67,7 +63,8 @@ const Post = (props) => {
                     </ul>
                     : showComments ?
                         <Comment userImg={userImg ?
-                            userImg : USERS[userId].userImg} /> : null}
+                            userImg : USERS[userId].userImg} />
+                        : null}
 
             </div>
         </>

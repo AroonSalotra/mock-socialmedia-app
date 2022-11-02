@@ -9,7 +9,7 @@ const News = (props) => {
     // console.log(data)
 
     return (
-        <section className="sm:w-fit flex flex-col gap-2 m-auto">
+        <section className="sm:w-fit flex flex-col gap-2 m-auto pt-4">
 
             {showLink ? <Link className="m-auto"
                 to="mock-socialmedia-app/news">

@@ -14,9 +14,9 @@ const MarketDisplay = (props) => {
     // flex justify-center gap-20 flex-wrap"
     return (
         <section>
-            <h1 className="text-white text-center text-3xl">This is the marketplace!</h1>
+            {/* <h1 className="text-white text-center text-3xl">This is the marketplace!</h1> */}
             <div className={customClass ? customClass :
-                "flex flex-col items-center md:grid grid-cols-3 justify-center gap-20 lg:mx-64"}>
+                "flex flex-col items-center md:grid grid-cols-3 justify-center gap-20 pt-4 lg:mx-64"}>
                 {/* {MARKET.map(({ item, itemImg, price, sellerName }) => {
                     return <MarketItem
                         item={item}

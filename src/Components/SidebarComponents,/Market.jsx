@@ -21,6 +21,7 @@ const Market = (props) => {
                     Go to Marketplace
                 </StyledButton>
             </Link>
+            
             <p className="text-sm text-slate-400 font-semibold italic w-40">
                 Your wishlisted items will appear here</p>
 
