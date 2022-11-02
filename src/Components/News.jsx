@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const News = (props) => {
     const { customClass, showLink } = props;
+    
     const data = LocalData
 
     return (

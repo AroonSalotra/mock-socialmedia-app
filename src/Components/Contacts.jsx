@@ -9,7 +9,8 @@ const Contacts = (props) => {
 
     return (
         <>
-            <section className="fixed right-5 mt-40 pb-8 w-40 xl:border-y">
+            <section className="fixed right-5 mt-40 pb-8 w-40 xl:border-y-2 border-gray-700">
+
                 <div className={`flex flex-col ${display} bg-gray-800 xl:flex :translate-y-0 mt-10`}>
                     {userFilter.map(({ userId }) => {
                         return <UserDisplay

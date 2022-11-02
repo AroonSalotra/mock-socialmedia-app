@@ -30,7 +30,9 @@ function App() {
   return (
 
     <BrowserRouter>
+
       <div className="app">
+
         <Navbar />
 
         <Tabs
@@ -40,8 +42,8 @@ function App() {
 
         <ViewChats />
 
-
         <div className='py-5 lg:py-24'>
+
           <Routes>
 
             <Route path='/mock-socialmedia-app/'
@@ -68,8 +70,11 @@ function App() {
             </Route>
 
           </Routes>
+
         </div>
+
       </div>
+
     </BrowserRouter>
 
   );

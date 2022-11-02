@@ -1,4 +1,4 @@
-import { AiFillMessage, AiFillCustomerService, AiFillNotification, AiFillHome, AiFillHdd } from "react-icons/ai"
+import { AiFillMessage, AiFillCustomerService, AiFillNotification, AiFillHome, AiFillHdd, AiFillGithub } from "react-icons/ai"
 import { GiHamburgerMenu } from "react-icons/gi"
 import ListLinkTo from "./ListLinkTo";
 import { useState } from "react";
@@ -40,6 +40,13 @@ const Navbar = () => {
                 <ListLinkTo
                     ulClass={`${display} flex flex-col pt-14 lg:flex-row lg:pt-0 lg:flex gap-5 items-center m-auto`}
                     data={navbarContent.listA}>
+
+                    <a href="https://github.com/AroonSalotra/mock-socialmedia-app"
+                        target={"_blank"}
+                        rel="noreferrer" >
+                        <AiFillGithub
+                            className="text-3xl hover:bg-gray-700 cursor-pointer rounded-full active:scale-95" />
+                    </a>
                 </ListLinkTo>
             </div>
 

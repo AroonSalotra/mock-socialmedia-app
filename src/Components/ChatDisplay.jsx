@@ -1,7 +1,7 @@
 const ChatDisplay = (props) => {
     const { data } = props;
 
-    console.log(data)
+    // console.log(data)
 
     return (
         <section>
@@ -11,11 +11,13 @@ const ChatDisplay = (props) => {
                         {(to.length > from.length ? to : from)
                             .map((elem, index) => {
                                 return <>
-                                    {to[index] ? <li className="bg-lime-700 mr-10 rounded-md rounded-bl-none">
+                                    {to[index] ? <li 
+                                        className="bg-lime-700 mr-10 rounded-md rounded-bl-none">
                                         {to[index]}
                                     </li> : null}
 
-                                    {from[index] ? <li className="bg-gray-800 ml-10 rounded-md rounded-br-none">
+                                    {from[index] ? <li 
+                                        className="bg-gray-800 ml-10 rounded-md rounded-br-none">
                                         {from[index]}
                                     </li> : null}
                                 </>
